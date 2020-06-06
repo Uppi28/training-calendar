@@ -59,6 +59,19 @@ html, body {
     width: 50%;
 }
 
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+
 /* snack bar global css */
 .success-bar{
     background-color: #094c09 !important;
