@@ -1,0 +1,25 @@
+[{
+    "user_name" : "Upendra Kumar",
+    "employee_id" : "e657578",
+    "contact_no" : 8376563736,
+    "department" : "Chris Parker",
+    "company" : "Sanofi Aventis US",
+    "email_id" : "upendra.br@sanofi.com",
+    "role" : "admin"
+},{
+    "user_name" : "Vinoth Sharma",
+    "employee_id" : "e657678",
+    "contact_no" : 8754465457,
+    "department" : "Chris Parker",
+    "company" : "Sanofi Aventis US",
+    "email_id" : "vinoth.sharma@sanofi.com",
+    "role" : "admin"
+},{
+    "user_name" : "admin",
+    "employee_id" : "e6567578",
+    "contact_no" : 946547765,
+    "department" : "Chris Parker",
+    "company" : "Sanofi Aventis US",
+    "email_id" : "admin.me@sanofi.com",
+    "role" : "admin"
+}]
