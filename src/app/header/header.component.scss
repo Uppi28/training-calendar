@@ -1,7 +1,14 @@
 .headWrap {
     height: 10vh;
     background: rgba(82,92,163,.95);
+    padding: 1vw;
+    color: white;
+    font-size: 1.4vw;
+    box-shadow: 1px 1px 1px lightgray;
     div {
         height: 100%;
+    }
+    .appName {
+        
     }
 }
