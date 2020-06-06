@@ -6,8 +6,8 @@ import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  { path: 'header', component: HeaderComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'main', component: MainComponent },
   { path: '', component: MainComponent}
 ];
 
