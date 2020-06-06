@@ -1,19 +1,44 @@
 
+$color-primary: rgba(82, 92, 163, 0.95);
+$color-primary-faded: rgba(82, 92, 163, 0.85);
+
+
+
+.outer-wrapper{
+	background: $color-primary-faded;
+    width: 100%;
+    padding: 8vh;
+    height: 100%;
+}
+.login-wrapper{
+	position: relative;
+    height: 100%;
+    z-index: 0;
+	width: 100%;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
 .wave{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
     z-index: -1;
     width: 50vw;
 }
+.wave {
+	path{
+		fill: $color-primary !important;
+	}
+}
 
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 7rem;
+    grid-gap: 14rem;
     // padding: 0 2rem;
 }
 
@@ -31,10 +56,10 @@
 }
 
 .img img{
-	width: 500px;
+	width: 280px;
 }
 
-form{
+.form{
 	width: 360px;
 }
 
@@ -43,10 +68,10 @@ form{
 }
 
 .login-content h2{
-	margin: 15px 0;
-	color: #333;
-	text-transform: uppercase;
-	font-size: 2.9rem;
+    margin: 15px 0;
+    color: #5a63a8;
+    text-transform: uppercase;
+    font-size: 2.9rem;
 }
 
 .login-content .input-div{
@@ -151,28 +176,6 @@ a:hover{
 	color: #38d39f;
 }
 
-.btn{
-	display: block;
-	width: 100%;
-	height: 50px;
-	border-radius: 25px;
-	outline: none;
-	border: none;
-	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
-	background-size: 200%;
-	font-size: 1.2rem;
-	color: #fff;
-	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
-	margin: 1rem 0;
-	cursor: pointer;
-	transition: .5s;
-}
-.btn:hover{
-	background-position: right;
-}
-
-
 @media screen and (max-width: 1050px){
 	.container{
 		grid-gap: 5rem;
@@ -180,7 +183,7 @@ a:hover{
 }
 
 @media screen and (max-width: 1000px){
-	form{
+	.form{
 		width: 290px;
 	}
 

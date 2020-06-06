@@ -1,3 +1,4 @@
+<div class="outer-wrapper">
 <div class="login-wrapper">
     <!-- <img class="wave" src="assets/wave.png"> -->
     <div class="wave" >
@@ -5,11 +6,11 @@
     </div>
 	<div class="container">
 		<div class="img">
-			<img src="assets/bg.svg">
+			<img src="assets/login_img1.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
-				<img src="assets/avatar.svg">
+			<div class="form">
+				<img src="assets/images/logo.jpg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -30,8 +31,10 @@
             	   </div>
             	</div>
             	<a href="#">Forgot Password?</a>
-            	<input type="" class="btn" value="Login">
-            </form>
+				<button mat-raised-button [color]="'ok'" style="width: 45%;"
+				(click)="login()">Login</button>
+            </div >
         </div>
     </div>
+</div>
 </div>
