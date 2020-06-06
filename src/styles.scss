@@ -19,7 +19,7 @@ html, body {
         &.bottom {
             align-items: flex-end;
         }
-        &.center {
+        &.middle {
             align-items: center;
         }
     }
@@ -58,6 +58,19 @@ html, body {
 .width50 {
     width: 50%;
 }
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
 
 /* snack bar global css */
 .success-bar{
