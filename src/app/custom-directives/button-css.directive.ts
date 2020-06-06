@@ -5,7 +5,7 @@ import { Directive, Output, Input, EventEmitter, HostBinding, HostListener, Elem
 })
 export class ButtonCssDirective {
     private el: ElementRef;
-    @Input() cssBtn: any;
+    @Input() color: any;
     @Input() disabled;
 
     constructor(el: ElementRef) {
@@ -25,11 +25,11 @@ export class ButtonCssDirective {
 
     getBackgroundColor() {
         let l_bg_color = '';
-        if (this.cssBtn === 'cancel')
+        if (this.color === 'cancel')
             l_bg_color = '#d2322d'
-        else if (this.cssBtn === 'ok')
+        else if (this.color === 'ok')
             l_bg_color = '#5cb85c'
-        else if (this.cssBtn === 'mid')
+        else if (this.color === 'mid')
             l_bg_color = '#0892d0'
         return l_bg_color
     }
