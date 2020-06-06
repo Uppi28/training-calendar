@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomDirectiveModule } from "./custom-directives/custom.directives.module";
@@ -13,6 +14,7 @@ import { CustomDirectiveModule } from "./custom-directives/custom.directives.mod
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    MainComponent,
     LoginComponent
   ],
   imports: [
