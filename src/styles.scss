@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.flex {
+    &.align {
+        .top {
+            align-items: flex-start;
+        }
+        .bottom {
+            align-items: flex-end;
+        }
+        .center {
+            align-items: center;
+        }
+    }
+    &.justify{
+        .left{
+            justify-content: flex-start;
+        }
+        .right{
+            justify-content: flex-end;
+        }
+        .center{
+            justify-content: center;
+        }
+    }
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.height50 {
+    height: 50%;
+}
+.width50 {
+    width: 50%;
+}
