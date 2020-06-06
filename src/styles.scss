@@ -1,3 +1,6 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
@@ -54,4 +57,20 @@ html, body {
 }
 .width50 {
     width: 50%;
+}
+
+/* snack bar global css */
+.success-bar{
+    background-color: #094c09 !important;
+    color: white;
+}
+
+.error-bar{
+    background-color: #9c1a05 !important;
+    color: white;
+}
+
+.warning-bar{
+    background-color: #ffff00 !important;
+    color: black;
 }
