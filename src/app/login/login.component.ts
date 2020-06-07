@@ -1,14 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global.service';
+import { Router } from '@angular/router';
+import { NgToasterComponent } from '../custom-directives/ng-toaster/ng-toaster.component';
 
-/** Error when invalid control is dirty, touched, or submitted. */
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,44 +10,69 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginComponent implements OnInit {
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  userName:string = "";
+  password:string = "";
 
-  matcher = new MyErrorStateMatcher();
-
-  constructor() { }
+  constructor(public globalService: GlobalService,
+    public ngToaster: NgToasterComponent,
+    private route: Router) { }
 
   ngOnInit(): void {
-    console.log("");
+    // Utils.showSpinner();
   }
 
-  ngAfterViewInit(){
+
+  ngAfterViewInit() {
     const inputs = document.querySelectorAll(".input");
-
-
-    function addcl(){
+    function addcl() {
       let parent = this.parentNode.parentNode;
       parent.classList.add("focus");
     }
-    
-    function remcl(){
+
+    function remcl() {
       let parent = this.parentNode.parentNode;
-      if(this.value == ""){
+      if (this.value == "") {
         parent.classList.remove("focus");
       }
     }
-    
+
     inputs.forEach(input => {
       input.addEventListener("focus", addcl);
       input.addEventListener("blur", remcl);
     });
-    
+
   }
 
-  login(){
+  loginApp(){
+    this.globalService.getUserDetailsHttp().subscribe(res=>{
+      if(!(this.userName && this.password)){
+        this.globalService.setSelectedUserData(res[0]);
+        this.route.navigate(['main']);
+      }
+      else if(this.validateUserData(res)){
+        this.globalService.setSelectedUserData(this.getUserData(res));
+        this.route.navigate(['main']);
+      }
+      else{
+        this.ngToaster.error("User details invalid")
+        return false
+      }
+    })
+  }
 
+  validateUserData(arr){
+    if(this.userName)
+    return arr.some(user=>{
+      if(user.user_name === this.userName && user.user_name === this.password)
+        return true
+      else
+        return false
+    })
+  }
+
+  getUserData(arr){
+    return arr.find(user=> user.user_name === this.userName)
   }
 
 }
+

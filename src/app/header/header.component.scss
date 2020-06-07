@@ -1,11 +1,41 @@
 .headWrap {
-    height: 10vh;
-    background: rgba(82,92,163,.95);
-    padding: 0 1vw;
+  height: 8vh;
+  background: rgba(82, 92, 163, 0.95);
+  padding: 0 1vw;
+  color: white;
+  font-size: 1.4vw;
+  box-shadow: 1px 5px 5px grey;
+  div {
+    height: 100%;
+  }
+}
+.logo img {
+  height: 4vh;
+}
+.logo span {
+  padding: 12px;
+  font-size: 6vh;
+}
+.userDets input {
+  background: inherit;
+  border: unset;
+  border-bottom: 2px solid white;
+  margin-right: 6px;
+  font-size: 0.8em;
+}
+.userDets {
+  input::placeholder {
     color: white;
-    font-size: 1.4vw;
-    box-shadow: 1px 5px 5px grey;
-    div {
-        height: 100%;
-    }
+  }
+  input::-webkit-input-placeholder {
+    /* Edge */
+    color: white;
+  }
+  input:-ms-input-placeholder {
+    /* Internet Explorer */
+    color: white;
+  }
+  input:focus{
+      outline: unset;
+  }
 }
