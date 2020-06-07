@@ -11,13 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomDirectiveModule } from "./custom-directives/custom.directives.module";
 import { setAppInjector } from './app-injector';
 
+import { DataVerifyComponent } from './data-verify/data-verify.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    DataVerifyComponent
   ],
   imports: [
     BrowserModule,

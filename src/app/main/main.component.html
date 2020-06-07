@@ -1,5 +1,25 @@
 <app-header></app-header>
 
-<div class="mainWrap"></div>
+<div class="mainWrap">
+    <div class="tabContainer">
+        <mat-tab-group>
+            <mat-tab label="Data Verification">
+                <div class="tabcontentWrap">
+                    <app-data-verify></app-data-verify>
+                </div>
+            </mat-tab>
+            <mat-tab label="Customise Courses">
+                <div class="tabcontentWrap">
+                    Customise Courses
+                </div>
+            </mat-tab>
+            <mat-tab label="Calendar"> 
+                <div class="tabcontentWrap">
+                    Calendar View
+                </div>    
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
 
 <app-footer></app-footer>
