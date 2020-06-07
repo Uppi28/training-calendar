@@ -33,6 +33,9 @@ html, body {
         &.center{
             justify-content: center;
         }
+        &.space-bw{
+            justify-content: space-between;
+        }
     }
 }
 
@@ -74,6 +77,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.textCenter{
+    text-align: center;
 }
 
 /* snack bar global css */
