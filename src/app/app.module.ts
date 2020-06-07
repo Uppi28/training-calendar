@@ -14,6 +14,7 @@ import { setAppInjector } from './app-injector';
 
 import { DataVerifyComponent } from './data-verify/data-verify.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuestionnaireComponent } from "./questionnaire/questionnaire.component";
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     LoginComponent,
     DataVerifyComponent,
-    DashboardComponent
+    DashboardComponent,
+    QuestionnaireComponent
   ],
   imports: [
     BrowserModule,
