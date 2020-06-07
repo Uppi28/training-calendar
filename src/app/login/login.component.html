@@ -1,40 +1,43 @@
 <div class="outer-wrapper">
-<div class="login-wrapper">
-    <!-- <img class="wave" src="assets/wave.png"> -->
-    <div class="wave" >
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.56,1.48 C45.71,122.86 287.24,31.08 510.15,158.38 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #08f;"></path></svg>
-    </div>
-	<div class="container">
-		<div class="img">
-			<img src="assets/login_img1.svg">
+	<div class="login-wrapper">
+		<!-- <img class="wave" src="assets/wave.png"> -->
+		<div class="wave">
+			<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+				<path d="M-0.56,1.48 C45.71,122.86 287.24,31.08 510.15,158.38 L0.00,150.00 L0.00,0.00 Z"
+					style="stroke: none; fill: #08f;"></path>
+			</svg>
 		</div>
-		<div class="login-content">
-			<div class="form">
-				<img src="assets/images/footer.png">
-				<h2 class="title">Welcome</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-				<button mat-raised-button [color]="'ok'" style="width: 45%;"
-				(click)="login()" routerLink="/main">Login</button>
-            </div >
-        </div>
-    </div>
-</div>
+		<div class="container">
+			<div class="img">
+				<img src="assets/login_img1.svg">
+			</div>
+			<div class="login-content">
+				<div class="form">
+					<img src="assets/images/footer.png">
+					<h2 class="title">Welcome</h2>
+					<div class="input-div one">
+						<div class="i">
+							<mat-icon>perm_identity</mat-icon>
+						</div>
+						<div class="div">
+							<h5>Username</h5>
+							<input type="text" class="input" [(ngModel)]="userName" />
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i">
+							<mat-icon>lock</mat-icon>
+						</div>
+						<div class="div">
+							<h5>Password</h5>
+							<input type="password" class="input" [(ngModel)]="password" />
+						</div>
+					</div>
+					<a href="#">Forgot Password?</a>
+					<button mat-raised-button [color]="'ok'" style="width: 45%;" (click)="loginApp()"
+					>Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

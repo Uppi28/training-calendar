@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-import Utils from '../utils';
+import { GlobalService } from '../global.service';
+import { Router } from '@angular/router';
+import { NgToasterComponent } from '../custom-directives/ng-toaster/ng-toaster.component';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,12 @@ import Utils from '../utils';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  userName:string = "";
+  password:string = "";
+
+  constructor(public globalService: GlobalService,
+    public ngToaster: NgToasterComponent,
+    private route: Router) { }
 
   ngOnInit(): void {
     // Utils.showSpinner();
@@ -38,7 +43,35 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login() {
+  loginApp(){
+    this.globalService.getUserDetailsHttp().subscribe(res=>{
+      if(!(this.userName && this.password)){
+        this.globalService.setSelectedUserData(res[0]);
+        this.route.navigate(['main']);
+      }
+      else if(this.validateUserData(res)){
+        this.globalService.setSelectedUserData(this.getUserData(res));
+        this.route.navigate(['main']);
+      }
+      else{
+        this.ngToaster.error("User details invalid")
+        return false
+      }
+    })
+  }
+
+  validateUserData(arr){
+    if(this.userName)
+    return arr.some(user=>{
+      if(user.user_name === this.userName && user.user_name === this.password)
+        return true
+      else
+        return false
+    })
+  }
+
+  getUserData(arr){
+    return arr.find(user=> user.user_name === this.userName)
   }
 
 }
