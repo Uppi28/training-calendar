@@ -50,7 +50,7 @@ export class DashboardUserMenuComponent implements OnInit {
       else
         menu.isSelected = false;
     })
-    this.router.navigate([selected.router])
+    this.router.navigate(["dashboard/"+selected.router])
   }
 
 }
