@@ -1,0 +1,44 @@
+.dataVerWrap{
+    height: 67vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-bottom: 1vh;
+}
+
+.cells {
+    padding: 1.5vh 2vw;
+    border-radius: 4px;
+    font-size: 0.9vw;
+    color: gray;
+}
+
+.logoHolder{
+    background: #005cb9;
+    color: white
+}
+
+.borderBottom {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 1vh;
+}
+
+.redBg {
+    background: rgb(255, 150, 150);
+    .cells{
+        color: white;
+        font-weight: 500;
+    }
+}
+
+.blueBg {
+    // background: #4d4dcb;
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.workDayImg {
+    background-image: url("../../assets/images/workday.png");
+}
