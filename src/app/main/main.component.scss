@@ -6,6 +6,8 @@
         .tabcontentWrap{
             padding: 1vw;
             height: 55vh;
+            max-height: 85vh;
+            overflow-y: auto;
         }
         button {
             margin: 0 1vw;

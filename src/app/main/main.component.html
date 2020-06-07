@@ -17,8 +17,9 @@
                     <button mat-button matStepperNext>Next</button>
                 </div>
             </mat-step>
-            <mat-step label="Calendar">
-                <p>You're welcome.</p>
+            <mat-step label="Go to Dashboard">
+                <p>You have completed the pre-requisites, please proceed to the Dashboard to access your customised Courses list.</p>
+                <button mat-raised-button [color]="'ok'" routerLink="/dashboard">Proceed to Dashboard</button>
             </mat-step>
         </mat-horizontal-stepper>
     </div>
