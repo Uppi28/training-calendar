@@ -70,7 +70,11 @@ html, body {
 .bolder {
     font-weight: bolder;
 }
-
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* snack bar global css */
 .success-bar{
