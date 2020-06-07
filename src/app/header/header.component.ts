@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     let user = this.globalService.getSelectedUserData();
-    // console.log(user);
+    console.log(user);
   }
 
 }
