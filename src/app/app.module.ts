@@ -15,6 +15,9 @@ import { setAppInjector } from './app-injector';
 import { DataVerifyComponent } from './data-verify/data-verify.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MyHomeComponent } from './my-home/my-home.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu/dashboard-user-menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     LoginComponent,
     DataVerifyComponent,
-    DashboardComponent
+    DashboardComponent,
+    MyHomeComponent,
+    UserProfileComponent,
+    DashboardUserMenuComponent
   ],
   imports: [
     BrowserModule,
