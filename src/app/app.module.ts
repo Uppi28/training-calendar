@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomDirectiveModule } from "./custom-directives/custom.directives.module";
 import { DataVerifyComponent } from './data-verify/data-verify.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { DataVerifyComponent } from './data-verify/data-verify.component';
     FooterComponent,
     MainComponent,
     LoginComponent,
-    DataVerifyComponent
+    DataVerifyComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
