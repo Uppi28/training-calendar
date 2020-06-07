@@ -1,0 +1,38 @@
+.disclaimer {
+    font-size: 1vw;
+    margin-bottom: 2vh;
+}
+.quesWrapper {
+    height: 58vh;
+    overflow-y: auto;
+    margin-bottom: 2vh;
+    padding: 1vh 1vw;
+    .quesTileWrap{
+        width: 94vw;
+        box-shadow: 1px 1px 5px darkgrey;
+        border: 1px solid lightgray;
+        margin-bottom: 1.5vh;
+        .quesWrap{
+            padding: 1vh 1vw;
+            .question{
+                padding: 1vh 0;
+            }
+            .answers {
+                padding: 1vh 1vw;
+                mat-radio-button {
+                    margin-right: 1vw;
+                }
+            }
+        }
+        .contactSupport {
+            height: 10.5vh;
+            * {
+                margin-right: 1vw;
+            }
+        }
+    }
+}
+
+:host ::ng-deep .mat-radio-label-content {
+    font-weight: normal;
+}
