@@ -1,7 +1,61 @@
 .dataVerWrap{
-    height: 65vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    background: #dfc6e326;
+    border-radius: 2vw;
+    padding: 5vh 3vw;
+    .headWrap{
+        color: #444492;
+        font-size: 2vw;
+        margin-bottom: 3vh;
+        padding-left: 2vw;
+        .userIconWrap{
+            margin-right: 3vw;
+            .material-icons {
+                font-size: 3vw;
+            }
+        }
+        
+    }
+    .dataRow {
+        height: 12vh;
+        margin-bottom: 2vh;
+        div {
+            .key {
+                color: #444492;
+                font-size: 1.3vw;
+                padding: 3vh 3vw;
+                background: white;
+                border-top-left-radius: 10vh;
+                border-bottom-left-radius: 10vh;
+                box-shadow: 0px 3px 6px #00000029;
+                font-weight: 500;
+            }
+        }
+        .compCellsWrap{
+            border-top-right-radius: 10vh;
+            border-bottom-right-radius: 10vh;
+            box-shadow: 0px 3px 6px #00000029;
+            div {
+                .compCells {
+                    font-size: 1.5vw;
+                    .compValueSec {
+                        font-size: 0.8vw;
+                        color: #B4B4B4;
+                        margin-bottom: 0.5vh;
+                    }
+                    .compValue {
+                        background: rgba(223, 198, 227, 0.44);
+                        border: 1px solid rgba(112, 112, 112, 0.44);
+                        border-radius: 10vh;
+                        width: 85%;
+                        color: #707070;
+                        padding: 1vh 0;
+                        font-size: 1vw;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .row {

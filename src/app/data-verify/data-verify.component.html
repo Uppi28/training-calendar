@@ -1,123 +1,35 @@
 <div class="dataVerWrap">
-    <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">&nbsp;</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells logoHolder flex align justify center middle">iLearn</div> 
+    <div class="headWrap flex align middle justify left">
+        <div class="userIconWrap">
+            <mat-icon class="material-icons">person_outline</mat-icon>
+        </div>
+        <div>VERIFICATION</div>
+    </div>
+
+    <div class="dataRow" *ngFor="let obj of verifications">
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 flex align middle justify center height100">
+            <div class="key col-md-12 col-lg-12 col-sm-12 col-xs-12 flex align middle justify center height100 noPadding">
+                {{ obj.key }}
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells logoHolder flex align justify center middle">WorkDay</div> 
+        </div>
+        <div class="compCellsWrap col-md-9 col-lg-9 col-sm-9 col-xs-9 flex align center justify center height100 noPadding white">
+            <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10 flex align center justify center height100 noPadding">
+                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                    <div class="compValueSec">Active Directory</div>
+                    <div class="compValue flex align middle justify center">{{ obj.adGroup }}</div>
+                </div>
+                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                    <div class="compValueSec">Sanofi iLearn</div>
+                    <div class="compValue flex align middle justify center">{{ obj.iLearn }}</div>
+                </div>
+                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                    <div class="compValueSec">Workday</div>
+                    <div class="compValue flex align middle justify center">{{ obj.workday }}</div>
+                </div>
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells logoHolder flex align justify center middle">Active Directory</div> 
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 flex align middle justify center height100 noPadding">
+                Tick
             </div>
         </div>
     </div>
-    
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Name</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Chris Parker</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Chris Parker</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Chris Parker</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Business Title</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Consultant</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Consultant</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Consultant</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Employee ID</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">e0376372</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">e0376372</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">e0376372</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Email ID</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">chris.parker@sanofi.com</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">chris.parker@sanofi.com</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">chris.parker@sanofi.com</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row redBg">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Cost Center</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">US000065479</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">US000065479</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">US000054671</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Department</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">IT</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">IT</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">IT</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>
-    <div class="row">
-        <div class="cells blueBg col-md-2 col-lg-2 col-sm-2 col-xs-2">Company</div>
-        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Sanofi Aventis US LLC</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Sanofi Aventis US LLC</div> 
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 flex justify center">
-                <div class="cells flex align justify center middle">Sanofi Aventis US LLC</div> 
-            </div>
-        </div>
-    </div>
-    <div class="borderBottom"></div>  
-    
 </div>
