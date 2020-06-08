@@ -6,6 +6,7 @@ import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyHomeComponent } from './my-home/my-home.component';
 import { DataVerifyComponent } from './data-verify/data-verify.component';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent,
     children: [
       { path: '', component: MainComponent },
-      { path: 'home', component: MyHomeComponent }
+      { path: 'home', component: MyHomeComponent },
+      { path: 'questionnaire', component: QuestionnaireComponent }
     ]
   },
   { path: '', component: LoginComponent }

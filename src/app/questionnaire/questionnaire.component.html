@@ -1,22 +1,28 @@
-<div class="disclaimer">Please answer the following questions to get assigned with customized courses !</div>
-
-<div class="quesWrapper row noPadding">
-    <div class="quesTileWrap col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadding" *ngFor="let quesObj of questions floatLeft">
-        <div class="quesWrap col-lg-10 col-md-10 col-sm-10 col-xs-10 noPadding ">
-            <div class="question">
-                {{ quesObj.question }}
+<div class="quesViewWrap">
+    <div class="contentWrap">
+        <div class="headWrap">
+            Welcome Christie! Please answer the following questions:
+        </div>
+        <div class="quesCont" *ngFor = "let ques of questions; let i = index;">
+            <div class="flex align middle justify space-bw">
+                <div class="flex align middle justify left">
+                    <div class="slNo flex align middle justify center">{{ i + 1}}</div>
+                    <div class="ques">{{ ques.question }}</div>
+                </div>
+                <div class="info">
+                    <img src="../../assets/images/info.png" alt="">
+                </div>
             </div>
-            <div class="answers">
-                <mat-radio-group class="example-radio-group">
-                    <mat-radio-button class="example-radio-button" *ngFor="let bool of quesObj.option" [value]="bool">
-                        {{bool}}
+            <div class="options">
+                <mat-radio-group>
+                    <mat-radio-button *ngFor="let option of ques.options" [value]="option">
+                        {{option}}
                     </mat-radio-button>
                 </mat-radio-group>
             </div>
         </div>
-        <div class="contactSupport cursorPointer col-lg-2 col-md-2 col-sm-2 col-xs-2 noPadding flex align middle justify right height100">
-            <img style="height: 5vh;" src="../../assets/images/contact-support.png" alt="">
-            <div>Contact Support</div> 
+        <div class="flex align middle justify center">
+            <div class="proceed flex align middle justify center" routerLink="/dashboard/home">PROCEED</div>
         </div>
     </div>
 </div>

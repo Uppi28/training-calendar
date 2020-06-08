@@ -39,6 +39,9 @@ html, body {
         &.space-even{
             justify-content: space-evenly;
         }
+        &.space-around{
+            justify-content: space-around;
+        }
     }
     .dirColumn {
         flex-direction: column;

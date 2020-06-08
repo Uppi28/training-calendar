@@ -1,9 +1,9 @@
 export const verifications = [
     {
         "key": "NAME",
-        "iLearn": "Chris Parker",
-        "workday": "Chris Parker",
-        "adGroup": "Chris Parker",
+        "iLearn": "Christie Parker",
+        "workday": "Christie Parker",
+        "adGroup": "Christie Parker",
         "verified": true
     },
     {
