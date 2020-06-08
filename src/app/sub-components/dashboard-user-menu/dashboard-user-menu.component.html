@@ -1,9 +1,12 @@
 <div class="user-menu-wrapper">
-    <div class="img flex align middle justify center" style="height: 40%;">
-        <img src="assets/person.svg" alt="" srcset="">
+    <div class="img flex align middle justify center" style="height: 30%;">
+        <img src="../../../assets/images/1@2x.png" alt="" srcset="">
+        <div class="verifiedIcon">
+            <img src="../../../assets/images/Group 1100.svg" alt="">
+        </div>
     </div>
     <div class="btn-wrapper">
-        <div class="flex-center" matRipple *ngFor="let menu of userMenu;let i=index;"
+        <div class="flex align middle list" matRipple *ngFor="let menu of userMenu;let i=index;"
          [ngClass]="{'selected': menu.isSelected }" 
          (click)="menuSelected(menu)">
             <mat-icon>{{ menu.icon_name }}</mat-icon>
