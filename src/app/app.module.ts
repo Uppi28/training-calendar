@@ -16,6 +16,11 @@ import { DataVerifyComponent } from './data-verify/data-verify.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuestionnaireComponent } from "./questionnaire/questionnaire.component";
 import { HttpClientModule } from '@angular/common/http';
+import { MyHomeComponent } from './my-home/my-home.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu/dashboard-user-menu.component';
+import { MyTrainingPanelComponent } from './sub-components/my-training-panel/my-training-panel.component';
+import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-panel.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     DataVerifyComponent,
     DashboardComponent,
+    MyHomeComponent,
+    UserProfileComponent,
+    DashboardUserMenuComponent,
+    MyTrainingPanelComponent,
+    OverduePanelComponent,
     QuestionnaireComponent
   ],
   imports: [

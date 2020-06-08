@@ -42,6 +42,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -88,7 +89,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTreeModule,
     MatBottomSheetModule,
     MatMomentDateModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRippleModule
   ],
   exports: [
     CommonModule,
@@ -134,7 +136,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTreeModule,
     MatBottomSheetModule,
     MatMomentDateModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRippleModule
   ],
 
 })

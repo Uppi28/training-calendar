@@ -47,11 +47,11 @@ export class LoginComponent implements OnInit {
     this.globalService.getUserDetailsHttp().subscribe(res=>{
       if(!(this.userName && this.password)){
         this.globalService.setSelectedUserData(res[0]);
-        this.route.navigate(['main']);
+        this.route.navigate(['dashboard']);
       }
       else if(this.validateUserData(res)){
         this.globalService.setSelectedUserData(this.getUserData(res));
-        this.route.navigate(['main']);
+        this.route.navigate(['dashboard']);
       }
       else{
         this.ngToaster.error("User details invalid")

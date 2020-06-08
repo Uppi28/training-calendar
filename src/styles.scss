@@ -33,6 +33,9 @@ html, body {
         &.center{
             justify-content: center;
         }
+        &.space-bw{
+            justify-content: space-between;
+        }
     }
 }
 
@@ -69,6 +72,17 @@ html, body {
 
 .bolder {
     font-weight: bolder;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textCenter{
+    text-align: center;
+}
+.red{
+    color: red;
 }
 
 .floatLeft {
