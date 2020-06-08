@@ -11,7 +11,7 @@ export class DashboardUserMenuComponent implements OnInit {
   public userMenu = [{
     label: "My Home",
     icon_name: "home",
-    isSelected: true,
+    isSelected: false,
     isDisabled: false,
     router: "home"
   },
