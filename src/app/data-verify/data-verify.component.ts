@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { verifications } from "../../assets/data/verification.js";
 
 @Component({
   selector: 'app-data-verify',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class DataVerifyComponent implements OnInit {
 
   constructor() { }
-
+  verifications = verifications;
   ngOnInit(): void {
+    console.log(verifications);
+    
   }
 
 }
