@@ -9,6 +9,14 @@ https://xd.adobe.com/view/10d030ae-f557-4c7a-78ea-dfa61aa416ea-66e1/
 https://xd.adobe.com/view/f7a0b3cf-7847-4441-62ce-b1d7ece6aea3-8191/
 
 
+Are you a new hire (joining date within 6 months from today) ? Yes/No
+Does your job require direct interaction with HCPs ? 
+Does your business title contain – Pasteur, Vaccine, Healthcare ?
+Is your headcount function in – Industrial Affairs, R&D, Genzyme ?
+Is your headcount function in (DMK-Marketing, DVT-Sales – in Field, FVT - Promotions) ?
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
