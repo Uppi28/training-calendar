@@ -1,42 +1,22 @@
 export const questions = [
     {
-        "question": "Would you like to register for Course 1 ?",
-        "option": ["Yes", "No"]
+        "question": "Are you a new hire (Joining date within 6 months from today) ?",
+        "options": ["Yes", "No"]
     },
     {
-        "question": "Would you like to register for Course 2 ?",
-        "option": ["Yes", "No"]
+        "question": "Does your job require direct interaction with HCP ?",
+        "options": ["Yes", "No"]
     },
     {
-        "question": "Would you like to register for Course 3 ?",
-        "option": ["Yes", "No"]
+        "question": "Does your business title contain – Pasteur, Vaccine, Healthcare ?",
+        "options": ["Yes", "No"]
     },
     {
-        "question": "Would you like to register for Course 4 ?",
-        "option": ["Yes", "No"]
+        "question": "Is your headcount function in – Industrial Affairs, R&D, Genzyme ?",
+        "options": ["Yes", "No"]
     },
     {
-        "question": "Would you like to register for Course 5 ?",
-        "option": ["Yes", "No"]
-    },
-    {
-        "question": "Would you like to register for Course 6 ?",
-        "option": ["Yes", "No"]
-    },
-    {
-        "question": "Would you like to register for Course 7 ?",
-        "option": ["Yes", "No"]
-    },
-    {
-        "question": "Would you like to register for Course 8 ?",
-        "option": ["Yes", "No"]
-    },
-    {
-        "question": "Would you like to register for Course 9 ?",
-        "option": ["Yes", "No"]
-    },
-    {
-        "question": "Would you like to register for Course 10 ?",
-        "option": ["Yes", "No"]
+        "question": "Is your headcount function in (DMK-Marketing, DVT-Sales – in Field, FVT - Promotions) ?",
+        "options": ["Yes", "No"]
     }
 ]
