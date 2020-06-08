@@ -2,26 +2,7 @@
 
 <div class="mainWrap">
     <div class="tabContainer">
-        <mat-horizontal-stepper>
-            <mat-step label="Data Verification">
-                <app-data-verify></app-data-verify>
-                <div class="flex justify right">
-                    <button mat-raised-button [color]="'cancel'">Contact Support</button>
-                    <button mat-raised-button matStepperNext [color]="'ok'">Proceed</button>
-                </div>
-            </mat-step>
-            <mat-step label="Customized Courses">
-                <app-questionnaire></app-questionnaire>
-                <div class="flex justify right">
-                    <button mat-raised-button matStepperPrevious [color]="'mid'">Back</button>
-                    <button mat-raised-button matStepperNext [color]="'ok'">Submit</button>
-                </div>
-            </mat-step>
-            <mat-step label="Go to Dashboard">
-                <p>You have completed the pre-requisites, please proceed to the Dashboard to access your customised Courses list.</p>
-                <button mat-raised-button [color]="'ok'" routerLink="/dashboard">Proceed to Dashboard</button>
-            </mat-step>
-        </mat-horizontal-stepper>
+        <app-data-verify></app-data-verify>
     </div>
 </div>
 

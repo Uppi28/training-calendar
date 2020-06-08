@@ -36,6 +36,12 @@ html, body {
         &.space-bw{
             justify-content: space-between;
         }
+        &.space-even{
+            justify-content: space-evenly;
+        }
+    }
+    .dirColumn {
+        flex-direction: column;
     }
 }
 
@@ -83,6 +89,10 @@ html, body {
 }
 .red{
     color: red;
+}
+
+.white {
+    background: white;
 }
 
 .floatLeft {
