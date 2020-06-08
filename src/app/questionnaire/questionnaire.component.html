@@ -1,0 +1,22 @@
+<div class="disclaimer">Please answer the following questions to get assigned with customized courses !</div>
+
+<div class="quesWrapper row noPadding">
+    <div class="quesTileWrap col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadding" *ngFor="let quesObj of questions floatLeft">
+        <div class="quesWrap col-lg-10 col-md-10 col-sm-10 col-xs-10 noPadding ">
+            <div class="question">
+                {{ quesObj.question }}
+            </div>
+            <div class="answers">
+                <mat-radio-group class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let bool of quesObj.option" [value]="bool">
+                        {{bool}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="contactSupport cursorPointer col-lg-2 col-md-2 col-sm-2 col-xs-2 noPadding flex align middle justify right height100">
+            <img style="height: 5vh;" src="../../assets/images/contact-support.png" alt="">
+            <div>Contact Support</div> 
+        </div>
+    </div>
+</div>

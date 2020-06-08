@@ -11,10 +11,10 @@
                 </div>
             </mat-step>
             <mat-step label="Customized Courses">
-                <p>The questionnaire will go here </p>
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+                <app-questionnaire></app-questionnaire>
+                <div class="flex justify right">
+                    <button mat-raised-button matStepperPrevious [color]="'mid'">Back</button>
+                    <button mat-raised-button matStepperNext [color]="'ok'">Submit</button>
                 </div>
             </mat-step>
             <mat-step label="Go to Dashboard">

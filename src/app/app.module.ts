@@ -14,6 +14,7 @@ import { setAppInjector } from './app-injector';
 
 import { DataVerifyComponent } from './data-verify/data-verify.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuestionnaireComponent } from "./questionnaire/questionnaire.component";
 import { HttpClientModule } from '@angular/common/http';
 import { MyHomeComponent } from './my-home/my-home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -34,7 +35,8 @@ import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-pa
     UserProfileComponent,
     DashboardUserMenuComponent,
     MyTrainingPanelComponent,
-    OverduePanelComponent
+    OverduePanelComponent,
+    QuestionnaireComponent
   ],
   imports: [
     BrowserModule,
