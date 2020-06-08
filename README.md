@@ -10,9 +10,13 @@ https://xd.adobe.com/view/f7a0b3cf-7847-4441-62ce-b1d7ece6aea3-8191/
 
 
 Are you a new hire (joining date within 6 months from today) ? Yes/No
+
 Does your job require direct interaction with HCPs ? 
+
 Does your business title contain – Pasteur, Vaccine, Healthcare ?
+
 Is your headcount function in – Industrial Affairs, R&D, Genzyme ?
+
 Is your headcount function in (DMK-Marketing, DVT-Sales – in Field, FVT - Promotions) ?
 
 
