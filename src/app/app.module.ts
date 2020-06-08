@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyHomeComponent } from './my-home/my-home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu/dashboard-user-menu.component';
+import { MyTrainingPanelComponent } from './sub-components/my-training-panel/my-training-panel.component';
+import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-panel.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu
     DashboardComponent,
     MyHomeComponent,
     UserProfileComponent,
-    DashboardUserMenuComponent
+    DashboardUserMenuComponent,
+    MyTrainingPanelComponent,
+    OverduePanelComponent
   ],
   imports: [
     BrowserModule,
