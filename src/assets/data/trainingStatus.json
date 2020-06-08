@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Trainer 1",
+        "status": "Completed",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Past"
+    },
+    {
+        "name": "Trainer 2",
+        "status": "Completed",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Past"
+    },
+    {
+        "name": "Trainer 3",
+        "status": "Ongoing (since 14:00)",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Now"
+    },
+    {
+        "name": "Trainer 4",
+        "status": "in 45 Minutes",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Upcoming"
+    },
+    {
+        "name": "Trainer 5",
+        "status": "in 2hours",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Upcoming"
+    },
+    {
+        "name": "Trainer 6",
+        "status": "Completed",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Past"
+    },
+    {
+        "name": "Trainer 7",
+        "status": "Completed",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Past"
+    },
+    {
+        "name": "Trainer 8",
+        "status": "in 5hours",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Upcoming"
+    },
+    {
+        "name": "Trainer 9",
+        "status": "in 2hours",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Upcoming"
+    },
+    {
+        "name": "Trainer 10",
+        "status": "Completed",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "btnStatus": "Past"
+    }
+]

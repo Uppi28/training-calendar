@@ -31,6 +31,10 @@ export class GlobalService {
     return this.httpClient.get("/assets/data/user_details.json");
   }
 
+  getTrainersStatusHttp(){
+    return this.httpClient.get("/assets/data/trainingStatus.json");
+  }
+
   public handleError(error: any): any {
     let errObj: any = {
       status: error.status,

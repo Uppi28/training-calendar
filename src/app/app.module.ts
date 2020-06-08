@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu/dashboard-user-menu.component';
 import { MyTrainingPanelComponent } from './sub-components/my-training-panel/my-training-panel.component';
 import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-panel.component';
+import { JourneyPanelComponent } from './sub-components/journey-panel/journey-panel.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-pa
     DashboardUserMenuComponent,
     MyTrainingPanelComponent,
     OverduePanelComponent,
-    QuestionnaireComponent
+    QuestionnaireComponent,
+    JourneyPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-pa
     BrowserAnimationsModule,
     CustomDirectiveModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
