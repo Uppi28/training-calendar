@@ -1,0 +1,32 @@
+<div class="journey-panel">
+    <div class="row1 flex align middle justify space-bw marginTop">
+        <span> {{ todayDate | date:'longDate' }} </span>
+        <span class="notification-no">07</span>
+    </div>
+    <input type="text" placeholder="Search trainings" class="width100 marginTop">
+
+    <div class="journey-stepper">
+        <mat-vertical-stepper #stepper>
+            <mat-step *ngFor="let lineitem of trainersStatus" [completed]="false" state="edit">
+                <ng-template matStepLabel>
+                    <div class="flex justify space-bw">
+                        <span class="width50"> {{ lineitem.name }} </span>
+                        <span class="width50 ellipsis"> {{ lineitem.status }} </span>
+                    </div>
+                </ng-template>
+                <div class="step-desc">
+                    {{ lineitem.desc }}
+                </div>
+                <div>
+                    <button class="step-btn" [ngClass]="lineitem.btnStatus">
+                        {{ lineitem.btnStatus }}
+                    </button>
+                </div>
+            </mat-step>
+            <!-- change default 'edit' icon -->
+            <ng-template matStepperIcon="edit">
+                <mat-icon>account_circle</mat-icon>
+            </ng-template>
+        </mat-vertical-stepper>
+    </div>
+</div>
