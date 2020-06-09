@@ -1,12 +1,12 @@
 <div class="overdue-training">
-    <div class="title padding5 bold" style="">OVERDUE Trainings</div>
+    <div class="title bold" style="padding : 10px 5px">OVERDUE Trainings</div>
     <div style="overflow: auto;height: 80%;" class="width100">
-        <div class="od-row flex align middle justify center padding5" *ngFor="let row of [1,2,3,7,5,5]">
-            <div class="" style="width: 40%;">Training {{ row }}  </div>
-            <div class="link cursorPointer" matTooltip="Visit Training Page">Training link</div>
-            <div class="flex align middle justify center">
+        <div class="od-row flex align middle justify center padding10" *ngFor="let row of trainings">
+            <div class="ellipsis" style="width: 60%;"> {{ row.label }}  </div>
+            <div class="flex align middle justify left ellipsis" style="width: 40%;">
+                <div class="link cursorPointer" matTooltip="Visit Training Page">link</div>
                 <mat-icon class="" style="font-size: 18px;padding: 3px;">account_circle</mat-icon>
-                 Alex Pandi
+                <div class="ellipsis"> {{  row.trainer }} </div>
             </div>
         </div>
     </div>
