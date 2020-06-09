@@ -21,13 +21,13 @@ export class MyCalendarComponent implements OnInit {
   currentDays;
   todayDate = moment().format();
   daysList = [
-    'Su',
-    'Mo',
-    'Tu',
-    'We',
-    'Th',
-    'Fr',
-    'Sa'
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat'
   ]
 
 
