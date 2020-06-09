@@ -1,6 +1,14 @@
-<div class="home-wrapper" style="display: inline-flex;">
-    <app-my-training-panel></app-my-training-panel>
-    <app-overdue-panel></app-overdue-panel>
-    <app-journey-panel></app-journey-panel>
+<div class="home-wrapper width100" style="display: inline-flex;">
 
+    <div style="width: 60vw;" class="part1 flex">
+        <div>
+            <app-my-training-panel style="margin: 1vw;"></app-my-training-panel>
+            <app-overdue-panel style="margin: 1vw;"></app-overdue-panel>
+        </div>
+        <div></div>
+       
+    </div>
+    <div style="width: 27vw;" class="part2 flex" style="margin: 1vw;">
+        <app-journey-panel></app-journey-panel>
+    </div>
 </div>
