@@ -1,0 +1,51 @@
+<div class="calendar-wrapper">
+    <div class="header flex align middle">
+        <div class="bold flex justify left" style="width: 40%;text-align: left;">
+            <div style="margin: 15px;" class="cursorPointer" (click)="previousMonth();"
+            matTooltip="Previous month"> {{ '<' }} </div>
+            <div style="margin:15px;"> {{ showDate }} </div>
+            <div style="margin:15px;" (click)="nextMonth();" class="cursorPointer"
+            matTooltip="Next month"> {{ '>' }} </div>
+        </div>
+
+        <div style="width:60%;text-align: right;">
+            <button class="rm-button-prop" disabled>
+                Year
+            </button>
+            <button class="rm-button-prop selected">
+                Month
+            </button>
+            <button class="rm-button-prop" disabled>
+                Week
+            </button>
+        </div>
+    </div>
+
+    <table class="month-view">
+        <thead class="cd-days">
+            <tr>
+                <th *ngFor="let day of daysList;">
+                    {{day}}
+                </th>
+            </tr>
+            <tr>
+                <td class="cd-header-divider" colspan="7"></td>
+            </tr>
+        </thead>
+
+        <tbody class="cd-dates">
+            <tr *ngFor="let row of groupedArray;let i = index;">
+                <th *ngFor="let ele of row;let j = index;"
+                    [ngClass]="{'active':ele.isSelected,'disable':ele.isDisabled,'blackList':ele.isBlackList}">
+                    <div>
+                        <span *ngIf="ele.isDisabled">{{ ele.value }}</span>
+                        <span *ngIf="!ele.isDisabled" (click)="dateClicked(i,j);">{{ ele.value }}</span>
+                        <span style="font-size: 2em;color:white" *ngIf="ele.arrContainer.length === 0">.</span>
+                        <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 1">.</span>
+                        <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 2">..</span>
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

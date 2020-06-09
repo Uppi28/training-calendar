@@ -1,0 +1,118 @@
+.calendar-wrapper {
+  width: 50vw;
+  box-shadow: 0px 3px 6px #00000029;
+  //   height: 80vh;
+  // display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  // background: #444492;
+  font-size: 1vw;
+  // color: white;
+}
+
+// --------------my calendar css---------------
+
+.month-view {
+  width: -webkit-fill-available;
+  margin-top: 10px;
+}
+table th {
+  height: 6vw;
+  width: 6vw;
+  text-align: center;
+}
+
+.header {
+  padding: 30px 35px 6px;
+  display: flex;
+  font-size: 1.1em;
+}
+
+.left-btn {
+  width: 40%;
+  font-size: 14px;
+  font-weight: 600;
+}
+.right-btn {
+  width: 10%;
+}
+.centre-btn {
+  width: 10%;
+}
+
+.rm-button-prop {
+  text-transform: uppercase;
+  border: unset;
+  background: unset;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px 10px;
+  padding: 11px;
+}
+
+.active {
+  background-color: #444492;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2em;
+}
+.disable {
+  color: #d0cbcb;
+  cursor: default;
+}
+
+.blackList {
+  color: white;
+  background: #f3560b;
+  border-radius: 50%;
+}
+
+.cd-dates {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.cd-days {
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.cd-header-divider {
+  /* height:1px; */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.12);
+}
+.cd-dates th.disable:hover {
+  background: unset;
+}
+.cd-dates th.active:hover {
+  background-color: #444492;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2em;
+}
+.cd-dates th:hover {
+  background: #e6e6e6;
+  border-radius: 9px;
+}
+.blackList:hover {
+  /* color: #d0cbcb; */
+  background: #f3560b !important;
+}
+.cd-dates th span {
+  display: inline-block;
+  width: 100%;
+  font-weight: 500;
+  /* height: 100%; */
+}
+
+button:focus,
+button:active {
+  /* border: 1px solid white; */
+  box-shadow: unset;
+  border: unset;
+}
+.rm-button-prop.selected{
+    background: #444492;
+    color: white;
+    border-radius: 10px;
+}
