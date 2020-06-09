@@ -11,6 +11,7 @@
     border: unset;
     padding: 8px;
     border-radius: 4px;
+    color: black;
   }
   input:focus {
     outline: unset;
@@ -104,6 +105,9 @@ mat-vertical-stepper{
 }
 ::ng-deep .mat-vertical-stepper-header{
     pointer-events: none !important;
+}
+::ng-deep .mat-vertical-content{
+  padding: 0 18px 0px 16px;
 }
 
 .Past{

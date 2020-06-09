@@ -9,6 +9,31 @@ export class OverduePanelComponent implements OnInit {
 
   constructor() { }
 
+  trainings = [{
+    label : "US Training on Promotion",
+    trainer : "Alex Mandrake"
+  },
+  {
+    label : "US Training on CIA 2021",
+    trainer : "Alex Mandrake"
+  },
+  {
+    label : "US Training on Engagement",
+    trainer : "Alex Mandrake"
+  },
+  {
+    label : "US Training on Pharma Science",
+    trainer : "Alex Mandrake"
+  },
+  {
+    label : "US Training on Promotion",
+    trainer : "Alex Mandrake"
+  },
+  {
+    label : "US Training on Promotion",
+    trainer : "Alex Mandrake"
+  }]
+
   ngOnInit(): void {
   }
 

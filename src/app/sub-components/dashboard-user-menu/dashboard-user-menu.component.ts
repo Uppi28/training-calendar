@@ -34,7 +34,7 @@ export class DashboardUserMenuComponent implements OnInit {
     icon_name: "list_alt",
     isSelected: false,
     isDisabled: false,
-    router: "home"
+    router: "training"
   }]
 
 

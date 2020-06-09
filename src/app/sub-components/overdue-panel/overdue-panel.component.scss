@@ -13,14 +13,18 @@
     border-radius: 5px;
     background: #ca4331;
     margin: 8px 0px;
+    font-size: 0.8em;
 }
-.title{
-
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .link{
     padding: 0px 8px;
     border-radius: 5px;
     background: #AA2222;
+    font-size: 0.7em;
 }
 .padding10{
     padding: 10px;

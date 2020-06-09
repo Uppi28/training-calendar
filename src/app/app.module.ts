@@ -22,6 +22,8 @@ import { DashboardUserMenuComponent } from './sub-components/dashboard-user-menu
 import { MyTrainingPanelComponent } from './sub-components/my-training-panel/my-training-panel.component';
 import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-panel.component';
 import { JourneyPanelComponent } from './sub-components/journey-panel/journey-panel.component';
+import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
+import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { JourneyPanelComponent } from './sub-components/journey-panel/journey-pa
     MyTrainingPanelComponent,
     OverduePanelComponent,
     QuestionnaireComponent,
-    JourneyPanelComponent
+    JourneyPanelComponent,
+    MyTrainingsComponent,
+    MyCalendarComponent
   ],
   imports: [
     BrowserModule,
