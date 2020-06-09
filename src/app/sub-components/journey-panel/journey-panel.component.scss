@@ -1,39 +1,150 @@
-.journey-panel{
-    width: 25vw;
-    height: 80vh;
-    // display: inline-block;
-    border-radius: 10px;
-    padding: 10px;
-    background: #f9ebf7;
-    font-size: 1vw;
+.journey-panel {
+  width: 25vw;
+  //   height: 80vh;
+  // display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  background: #444492;
+  font-size: 1vw;
+  color: white;
+  input {
+    border: unset;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  input:focus {
+    outline: unset;
+  }
 }
-.padding10{
-    padding: 10px;
+.padding10 {
+  padding: 10px;
 }
-.padding5{
-    padding: 5px;
+.padding5 {
+  padding: 5px;
 }
-.font120em{
-    font-size: 1.2em;
+.font120em {
+  font-size: 1.2em;
 }
-.font150em{
-    font-size: 1.5em;
+.font150em {
+  font-size: 1.5em;
 }
-.row1{
+.row1 {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.marginTop {
+  margin: 10px 0px;
+}
 
+.ellipsis {
+  font-size: 0.7em;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // min-width: 50px;
+  vertical-align: middle;
+  text-align: end;
 }
 
-.ellipsis{
-    font-size: 0.7em;
-    display: inline-block;
-    white-space: nowrap;
+::ng-deep .mat-step-label {
+  width: 100%;
+}
+
+.journey-stepper {
+  overflow: auto;
+  height: 70vh;
+}
+
+.notification-no {
+  background: #ffc300;
+  border-radius: 22px;
+  padding: 2px 8px;
+}
+.step-desc{
+    height: 39px;
+    font-size: 0.8em;
     overflow: hidden;
-    text-overflow: ellipsis;
-    // min-width: 50px;
-    vertical-align: middle;
-    text-align: end;
 }
 
-::ng-deep .mat-step-label{
-    width: 100%;
+// .journey-panel {
+//     input::placeholder {
+//       color: black;
+//     }
+//     input::-webkit-input-placeholder {
+//       /* Edge */
+//       color: white;
+//     }
+//     input:-ms-input-placeholder {
+//       /* Internet Explorer */
+//       color: white;
+//     }
+//     input:focus{
+//         outline: unset;
+//     }
+//   }
+mat-vertical-stepper{
+    background: #444492;
+}
+
+::ng-deep .mat-step-header .mat-step-label.mat-step-label-active{
+    color: white;
+}
+::ng-deep .mat-stepper-vertical-line::before{
+    border-left-color: unset;
+    left: -12px !important;
+}
+::ng-deep .mat-vertical-stepper-header{
+    padding: 12px !important;
+}
+::ng-deep .mat-vertical-stepper-content 
+{
+    visibility: visible !important;
+    height: 100% !important;
+}
+::ng-deep .mat-vertical-stepper-header{
+    pointer-events: none !important;
+}
+
+.Past{
+    background: #e8721d;
+}
+
+.Upcoming{
+    background: #2B9833;
+}
+.Now{
+    background: red;
+}
+.step-btn{
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 1em;
+    border: unset;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    // background: rgba(255,0,0,0.8); 
+    background: #282870;
+
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #282870;
 }
