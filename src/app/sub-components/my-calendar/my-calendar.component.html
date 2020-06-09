@@ -39,7 +39,7 @@
                     [ngClass]="{'active':ele.isSelected,'disable':ele.isDisabled,'blackList':ele.isBlackList}">
                     <div>
                         <span *ngIf="ele.isDisabled">{{ ele.value }}</span>
-                        <span *ngIf="!ele.isDisabled" (click)="dateClicked(i,j);">{{ ele.value }}</span>
+                        <span *ngIf="!ele.isDisabled" >{{ ele.value }}</span>
                         <span style="font-size: 2em;color:white" *ngIf="ele.arrContainer.length === 0">.</span>
                         <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 1">.</span>
                         <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 2">..</span>
