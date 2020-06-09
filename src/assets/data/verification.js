@@ -28,6 +28,13 @@ export const verifications = [
         "verified": true
     },
     {
+        "key": "COST CENTER",
+        "iLearn": "US000065479",
+        "workday": "US000065479",
+        "adGroup": "US000065479",
+        "verified": false
+    },
+    {
         "key": "DEPARTMENT",
         "iLearn": "Finance",
         "workday": "Finance",
