@@ -1,9 +1,9 @@
 export const verifications = [
     {
         "key": "NAME",
-        "iLearn": "Chris Parker",
-        "workday": "Chris Parker",
-        "adGroup": "Chris Parker",
+        "iLearn": "Christie Parker",
+        "workday": "Christie Parker",
+        "adGroup": "Christie Parker",
         "verified": true
     },
     {
@@ -22,10 +22,17 @@ export const verifications = [
     },
     {
         "key": "EMAIL ID",
-        "iLearn": "chris.parker@Sanofi.com",
-        "workday": "chris.parker@Sanofi.com",
-        "adGroup": "chris.parker@Sanofi.com",
+        "iLearn": "christie.parker@Sanofi.com",
+        "workday": "christie.parker@Sanofi.com",
+        "adGroup": "christie.parker@Sanofi.com",
         "verified": true
+    },
+    {
+        "key": "COST CENTER",
+        "iLearn": "US000065479",
+        "workday": "US000065479",
+        "adGroup": "US000065479",
+        "verified": false
     },
     {
         "key": "DEPARTMENT",

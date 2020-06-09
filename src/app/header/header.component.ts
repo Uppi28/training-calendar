@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { GlobalService } from '../global.service';
 export class HeaderComponent implements OnInit {
 
   constructor(public globalService: GlobalService) { }
+
+  @Input () login?: string;
 
   ngOnInit(): void {
     let user = this.globalService.getSelectedUserData();

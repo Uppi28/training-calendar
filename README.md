@@ -2,11 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-https://xd.adobe.com/view/3d56c004-56a3-40c2-5e7b-f7658a94ab00-4b67/
-https://xd.adobe.com/view/28eef08b-dc48-44a5-548e-a196775f8629-5edf/
-https://xd.adobe.com/view/65e67a71-170e-446e-5510-71cf59f3cacf-13d7/
-https://xd.adobe.com/view/10d030ae-f557-4c7a-78ea-dfa61aa416ea-66e1/
-https://xd.adobe.com/view/f7a0b3cf-7847-4441-62ce-b1d7ece6aea3-8191/
+1.	Login Page - https://xd.adobe.com/view/d846f92d-479a-4b80-5e6a-c2bfabd9bb2d-ae77/
+2.	Verification Page (not verified) - https://xd.adobe.com/view/df49997e-4559-4158-555a-bbfad9767ba2-a978/
+3.	Verification + Role based Question Page - https://xd.adobe.com/view/175b1b6c-22bb-4c96-62f3-a18980f7abdf-616a/
+4.	End User Profile - https://xd.adobe.com/view/5f7cea21-48ee-4a25-7886-b80df6422b15-294d/
+5.	Manager profile - https://xd.adobe.com/view/4f609e23-0bba-4f15-45c3-bd8de030dd02-3951/
+
+
+
+Are you a new hire (joining date within 6 months from today) ? Yes/No
+
+Does your job require direct interaction with HCPs ? 
+
+Does your business title contain – Pasteur, Vaccine, Healthcare ?
+
+Is your headcount function in – Industrial Affairs, R&D, Genzyme ?
+
+Is your headcount function in (DMK-Marketing, DVT-Sales – in Field, FVT - Promotions) ?
+
 
 
 ## Development server
