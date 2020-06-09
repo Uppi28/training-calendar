@@ -1,7 +1,4 @@
 <div class="headWrap row noMargin ">
-    <!-- <div class="logo col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle">
-        <img src="assets/images/logo.png" alt="Sanofi logo">
-    </div> -->
     <div class="logo appName col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle justify left" routerLink="/login">
         <img src="assets/images/logo.png" alt="Sanofi logo">
     </div>
@@ -9,16 +6,10 @@
         SOAR TRAINING PORTAL
     </div>
     <div class="userDets col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle justify right">
-        <img src="../../assets/images/userIcons.svg" alt="">
-        <!-- <button mat-icon-button style="">
-            <mat-icon>search</mat-icon>
-        </button>
-        <button mat-icon-button style="">
-            <mat-icon>notifications_active</mat-icon>
-        </button>
-        <button mat-icon-button style="">
-            <mat-icon>perm_identity</mat-icon>
-        </button> -->
-
+        <img src="../../assets/images/userIcons.svg" alt="" [hidden]="login">
+        <img src="../../assets/images/login-icon.svg" alt="" [hidden]="!login">
+        <div class="flex align middle" [hidden]="!login">
+            <span style="font-size: 0.8vw; margin-left: 0.5vw;" [hidden]="!login">LOGIN</span> 
+        </div>
     </div>
 </div>

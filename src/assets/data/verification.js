@@ -22,9 +22,9 @@ export const verifications = [
     },
     {
         "key": "EMAIL ID",
-        "iLearn": "chris.parker@Sanofi.com",
-        "workday": "chris.parker@Sanofi.com",
-        "adGroup": "chris.parker@Sanofi.com",
+        "iLearn": "christie.parker@Sanofi.com",
+        "workday": "christie.parker@Sanofi.com",
+        "adGroup": "christie.parker@Sanofi.com",
         "verified": true
     },
     {
