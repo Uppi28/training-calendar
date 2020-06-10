@@ -50,6 +50,11 @@ $primary-color: #444492;
         font-size: 1.5em;
         font-weight: 500;
     }
+    .left .desc{
+      font-size: 0.9em;
+      height: 6vh;
+      overflow: hidden;
+    }
 }
 .ellipsis{
     white-space: nowrap;
