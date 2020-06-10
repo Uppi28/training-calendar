@@ -24,7 +24,7 @@ export class DashboardUserMenuComponent implements OnInit {
   },
   {
     label: "My Team",
-    icon_name: "bar_chart",
+    icon_name: "people",
     isSelected: false,
     isDisabled: false,
     router: "team"
