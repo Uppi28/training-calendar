@@ -1,0 +1,226 @@
+.trainings-container{
+    width:100%;
+    height:100%;
+    display: flex;
+
+    .training-content{
+        flex:auto;
+        padding:3vw;
+        .training-card{
+            height:66vh;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            opacity: 1;
+            padding: 3vw;
+
+            .card-title{
+                height: 10%;
+                font-size: 2em;
+                letter-spacing: 4.8px;
+                color: #444492;
+                opacity: 1;
+                font-weight: 550;
+            }
+
+            .card-content{
+                height:90%;
+                width: 100%;
+                .training-details{
+                    width: 35%;
+                    margin-right: 5%;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 2px 6px #0000000A;
+                    opacity: 1;
+                    height: 100%;
+                    padding:1vw;
+                    .details-header{
+                        height:5vh;
+                        font-size: 1.25em;
+                        font-weight: 500;
+                        border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+                        span {
+                            letter-spacing: 0px;
+                            font-size: 1em;
+                            color: #4D4F5C;
+                            opacity: 1;
+                        }
+                    }
+                    .details-list{
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        height:14.28%;
+                        display: flex;
+                        .details-item{
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            .details-key{
+                                 text-align: left;
+                                font: Regular .9em/20px Roboto;
+                                letter-spacing: 0px;
+                                color: #4D4F5C;
+                                opacity: 0.5;;
+                            }
+                            .details-val{
+                                font: Bold .9em/25px Roboto;
+                                letter-spacing: 0px;
+                                color: #43425D;
+                                opacity: 1; 
+                            }
+                        }
+                        .align-left{
+                            display: flex;
+                            justify-content: flex-end !important;
+                        }
+                    }
+                    .details-list:not(:last-child){
+                        border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+                    }
+                }
+                .trainer-details{
+                    width: 60%;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    opacity: 1;
+                    height: 100%;
+                    .user-details{
+                        height:35%;
+                        box-shadow: 0px 2px 6px #0000000A;
+                        margin-bottom: 4vh;
+                        display: flex;
+                        padding: 1vw;
+                        display: flex;
+
+                        .trainer-profile{
+                            width:60%;
+                            height:100%;
+                            &-header{
+                                height:5vh;
+                                border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+                                span {
+                                    letter-spacing: 0px;
+                                    color: #4D4F5C;
+                                    opacity: 1;
+                                    font-size: 1.25em;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &-body{
+                                display: flex;
+                                height: 70%;
+
+                                .pic-secion{
+                                    width:30%;
+                                    height: 100%;
+                                    padding: 0.5vw 0;
+                                    img{
+                                        height:100%;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .name-section{
+                                    width:60%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    // margin-left:-2vw;
+                                    
+
+                                    .trainer-name{
+                                        letter-spacing: 0px;
+                                        color: #4D4F5C;
+                                        opacity: 1;
+                                        font-size: 1em;
+                                    }
+                                    .designation{
+                                        letter-spacing: 0px;
+                                        color: #4D4F5C;
+                                        opacity: 0.5;
+                                    }
+                                }
+                            }
+                        }
+                        .mail-box{
+                            width:40%;
+                            height:100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-end;
+                            padding-top: 3vh;
+                            padding-right: 2vh;
+
+                            img{
+                             width:12%
+                            }
+                        }
+
+                        
+                    }
+                    .training-desc{
+                        height:57.5%;
+                        box-shadow: 0px 2px 6px #0000000A;
+                        padding: 1vw;
+
+                        .training-desc-heading{
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            height:5vh;
+                         
+
+                            .title{
+                                width: 60%;
+                                height:100%;
+                                border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+                                span{
+                                    letter-spacing: 0px;
+                                    color: #4D4F5C;
+                                    opacity: 1;
+                                    font-size: 1.25em;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        .training-desc-content{
+                            height:59%;
+                            padding-top:1vw ;
+                            color: #4D4F5C;
+                            .secondary-heading{
+                                font-size: 1em;
+                                color: #a4a5ab;
+                            }
+                            p{
+                                padding-top: 1vw ;
+                                font-size: 0.9em;
+                                color: #bebfc4 !important;
+
+                            }
+                            
+                        }
+                        .butten-section{
+                            margin-top: auto;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            padding: 2vw;
+                            .success{
+                                font-size: 1em;
+                                background-color:#4B9726;
+                                color: #fff;
+                                padding:0.5vw;
+                                border: none;
+                                border-radius: 10px;
+                                font-weight: 500;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+    .empty-content{
+        flex:0 0 13vw;
+    }
+} 
