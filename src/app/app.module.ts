@@ -24,6 +24,8 @@ import { OverduePanelComponent } from './sub-components/overdue-panel/overdue-pa
 import { JourneyPanelComponent } from './sub-components/journey-panel/journey-panel.component';
 import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
 import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.component';
+import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
+import { MyTeamComponent } from './my-team/my-team.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.co
     QuestionnaireComponent,
     JourneyPanelComponent,
     MyTrainingsComponent,
-    MyCalendarComponent
+    MyCalendarComponent,
+    MyTrainingsListComponent,
+    MyTeamComponent
   ],
   imports: [
     BrowserModule,

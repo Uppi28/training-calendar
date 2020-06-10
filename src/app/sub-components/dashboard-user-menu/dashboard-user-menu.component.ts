@@ -16,18 +16,18 @@ export class DashboardUserMenuComponent implements OnInit {
     router: "home"
   },
   {
-    label: "Calendar",
+    label: "Trainings",
     icon_name: "calendar_today",
     isSelected: false,
     isDisabled: false,
-    router: "home"
+    router: "trainings"
   },
   {
-    label: "Analytics",
+    label: "My Team",
     icon_name: "bar_chart",
     isSelected: false,
     isDisabled: false,
-    router: "home"
+    router: "team"
   },
   {
     label: "Training",
