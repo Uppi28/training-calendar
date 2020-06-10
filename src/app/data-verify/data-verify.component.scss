@@ -118,3 +118,52 @@
 .workDayImg {
     background-image: url("../../assets/images/workday.png");
 }
+
+.modalDialog {
+    width: 50vw;
+}
+
+.emailImg {
+    width: 100%;
+}
+
+.modalHeader {
+    font-size: 1.3vw;
+    color: #a22;
+    font-weight: 500;
+    padding: 2vh 0;
+}
+
+.modalContainerText {
+    font-size: 1.1vw;
+    color: gray;
+    font-weight: 500;
+    line-height: 2vw;
+    text-align: center;
+}
+
+.modalFooter {
+    padding: 2vh 2vw;
+    button {
+        padding: 1.5vh 4vw;
+        border: none;
+        background: #56569d;
+        border-radius: 10vh;
+        color: white;
+        font-size: 1vw;
+    }
+}
+
+.modalContent {
+    border-radius: 6vh;
+    padding: 3vh 2vw;
+}
+
+.modalBody {
+    color: gray;
+}
+
+.emailContainer {
+    width: 80vw;
+    height: 90vh;
+}

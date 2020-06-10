@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { verifications } from "../../assets/data/verification.js";
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+
+declare var $: any;
 
 @Component({
   selector: 'app-data-verify',
@@ -10,36 +11,49 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class DataVerifyComponent implements OnInit {
 
-  constructor(private router: Router, 
-              public dialog: MatDialog) { }
+  constructor(private router: Router) { }
   verifications = verifications;
+  
+  verificationProcessWip = false;
   allVerified = true;
-
   ngOnInit(): void {
+    this.verifyData()
+  }
+
+  verifyData() {
+    this.allVerified = true;
     this,verifications.map(d => {
       d.verified ? null : this.allVerified = false;
     })
   }
 
-  proceedToQues () {
-    if (this.allVerified) {
+  correctQuesData () {
+    this.verifications.map(d => {
+      d.verified ? null : d.verified = true;
+    })
+    this.verifyData();
+    this.verificationProcessWip = false
+  }
+
+  proceedClicked () {
+    if (this.allVerified && !this.verificationProcessWip) {
       this.router.navigate(['dashboard/questionnaire'])
+    } else if (!this.allVerified && this.verificationProcessWip) {
+      $('#verificationWip').modal('show');
+      this.correctQuesData ()
+    } else {
+      $('#dataMismatchModal').modal('show');
     }
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(ProceedDialog, {panelClass: 'dialogContainer'});
+  initiateDataCorrection () {
+    this.verificationProcessWip = true;
+    $('#showEmailModal').modal('hide');
+  }
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  contactSupportClicked () {
+    $('#showEmailModal').modal('show')
   }
 
 }
 
-@Component({
-  selector: 'proceed-dialog',
-  templateUrl: './proceed-dialog.html',
-  styleUrls: ['./proceed-dialog.scss']
-})
-export class ProceedDialog {}
