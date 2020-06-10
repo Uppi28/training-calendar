@@ -1,8 +1,9 @@
 <div class="trainings-container">
     <div class="training-content">
         <div class="training-card">
-            <div class="card-title">
-                MY TRAININGS
+            <div class="card-title flex align middle justify space-bw">
+                MY TRAINING
+                <button class="back-btn" style="font-size: 0.6em;" routerLink="../trainings"> Back</button>
             </div>
             <div class="card-content flex-center">
                 <div class="training-details">
@@ -14,7 +15,7 @@
                             <span class="details-key">Name</span>
                         </div>
                         <div class="details-item align-left">
-                            <span class="details-val">US Training On Promotion</span>
+                            <span class="details-val"> {{ selectedtraining.training_name }} </span>
                         </div>
                     </div>
                     <div class="details-list">
@@ -30,7 +31,7 @@
                             <span class="details-key">Length Of Training</span>
                         </div>
                         <div class="details-item align-left">
-                            <span class="details-val">120 Minutes</span>
+                            <span class="details-val"> {{ selectedtraining.length_of_training }} </span>
                         </div>
                     </div>
                     <div class="details-list">
@@ -46,7 +47,7 @@
                             <span class="details-key">Start/Launch Date</span>
                         </div>
                         <div class="details-item align-left">
-                            <span class="details-val ">5th May 2019</span>
+                            <span class="details-val "> {{ selectedtraining.start_date }} </span>
                         </div>
                     </div>
                     <div class="details-list">
@@ -66,10 +67,10 @@
                             </div>
                             <div class="trainer-profile-body">
                                 <div class="pic-secion">
-                                    <img src="../../assets/person.svg" alt="trainer-pic">
+                                    <img [src]="'assets/icons/'+selectedtraining.dp" alt="trainer-pic">
                                 </div>
                                 <div class="name-section">
-                                    <span class="trainer-name">Tony Stark</span>
+                                    <span class="trainer-name">{{ selectedtraining.trainer_name }}</span>
                                     <span class="designation">HIPA Security Specialist</span>
                                 </div>
                             </div>

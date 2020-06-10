@@ -1,0 +1,80 @@
+[
+    {
+        "training_name": "US Code of Ethics Training and Annual Disclosure",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "0.png",
+        "trainer_name": "Andera Hedstrom",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "overdue",
+        "length_of_training" : "120 Minutes",
+        "start_date" : "5th Jul,2020",
+        "id" : 1
+    },
+    {
+        "training_name": "US Training on Promotion",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "1.png",
+        "trainer_name": "Tobias Morrisey",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "overdue",
+        "length_of_training" : "120 Minutes",
+        "start_date" : "10th Jul,2020",
+        "id" : 2
+    },
+    {
+        "training_name": "US Training on Interactions between Medical and Commercial Personnel",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "3.png",
+        "trainer_name": "Karine Shao",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "incomplete",
+        "length_of_training" : "100 Minutes",
+        "start_date" : "15th Jul,2020",
+        "id" : 3
+
+    },
+    {
+        "training_name": "US Training on Meals and Prohibition of Entertainment",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "5.png",
+        "trainer_name": "Eugenia Sung",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "incomplete",
+        "length_of_training" : "80 Minutes",
+        "start_date" : "25th Jul,2020",
+        "id" : 4
+    },
+    {
+        "training_name": "US Training on Engagement",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "1.png",
+        "trainer_name": "Anastacia Bolz",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "incomplete",
+        "length_of_training" : "120 Minutes",
+        "start_date" : "2nd Aug,2020",
+        "id" : 5
+    },
+    {
+        "training_name": "US Training on Pharma Science",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "4.png",
+        "trainer_name": "Eugenia Sung",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "upcoming",
+        "length_of_training" : "170 Minutes",
+        "start_date" : "5th Jul,2020",
+        "id" : 6
+    },
+    {
+        "training_name": "US Training on Sanofi US and Genzyme Corporate Integrity Agreement",
+        "desc": "For each training owned, Training Owners will be able to access a set of analytics (dependent upon what is available in iLearn), download these to MS Excel and initiate the reconciliation process (more details below). Training Owners will also be able to enable email reminders to users assigned their training, who have not yet completed.",
+        "dp": "3.png",
+        "trainer_name": "Eugenia Sung",
+        "note": "Training Owners will also be able to enable email reminders",
+        "status": "upcoming",
+        "length_of_training" : "120 Minutes",
+        "start_date" : "5th Jul,2020",
+        "id" : 7
+    }
+]

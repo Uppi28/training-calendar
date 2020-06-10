@@ -16,7 +16,7 @@ export class DashboardUserMenuComponent implements OnInit {
     router: "home"
   },
   {
-    label: "Trainings",
+    label: "My Trainings",
     icon_name: "calendar_today",
     isSelected: false,
     isDisabled: false,
@@ -30,11 +30,11 @@ export class DashboardUserMenuComponent implements OnInit {
     router: "team"
   },
   {
-    label: "Training",
-    icon_name: "list_alt",
+    label: "Analytics",
+    icon_name: "bar_chart",
     isSelected: false,
     isDisabled: false,
-    router: "training"
+    router: "team"
   }]
 
 

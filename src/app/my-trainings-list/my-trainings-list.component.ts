@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-my-trainings-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTrainingsListComponent implements OnInit {
 
-  constructor() { }
+
+  public training_list = [];
+  constructor(public globalService: GlobalService) { }
 
   ngOnInit(): void {
+    this.globalService.getTrainingListHttp().subscribe((res:any)=>{
+      this.training_list = res;
+      console.log(res);
+      
+    })
   }
 
 }

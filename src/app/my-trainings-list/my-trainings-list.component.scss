@@ -4,6 +4,7 @@ $primary-color: #444492;
   width: 81vw;
   font-size: 1vw;
   // color: white;
+  line-height: normal;
   margin: 3vw;
   padding: 30px;
   border-radius: 10px;
@@ -22,10 +23,10 @@ $primary-color: #444492;
     font-weight: 500;
   }
 }
-.btn-row button {
+.btn-row button , .right button {
   font-weight: 500;
   color: $primary-color;
-  padding: 8px 17px;
+  padding: 12px 26px;
   border-radius: 20px;
   text-transform: uppercase;
   box-shadow: 0px 3px 6px #00000029;
@@ -35,29 +36,87 @@ $primary-color: #444492;
     outline: unset;
   }
 }
-.overdue {
-  background: #f86049;
-}
-.incomplete {
-  background: #caecf6;
-}
-.upcoming {
-  background: #e0e1ef;
+.btn-row {
+  .overdue {
+    background: #f86049;
+  }
+  .incomplete {
+    background: #caecf6;
+  }
+  .upcoming {
+    background: #e0e1ef;
+  }
 }
 .panels{
     background: aliceblue;
+    border-radius: 35px;
+    padding: 25px 35px 10px;
+    margin: 20px 0px;
     .left .head{
         font-size: 1.5em;
         font-weight: 500;
+        cursor: pointer;
     }
     .left .desc{
       font-size: 0.9em;
-      height: 6vh;
+      height: 8vh;
       overflow: hidden;
+    }
+    .left .people{
+      font-size: 0.8em;
+      mat-icon{
+        margin-right: 8px;
+        color: $primary-color;
+      }
+    }
+    .right img{
+      width: 28%;
+      height: 70%;
+    }
+    .right .trainer-name{
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+    .right .note{
+      font-size: 0.8em;
     }
 }
 .ellipsis{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.panels {
+  &.overdue{
+    background: #fae7e4;
+    .head{
+      color: #AA2222;
+    }
+    button{
+      background: #F86049;
+      color: white;
+    }
+  }
+  &.incomplete{
+    background: #e3f3f8;
+    .head{
+      color: #4B5E96;
+    }
+    button{
+      background: #4B5E96;
+      color: white;
+    }
+  }
+  &.upcoming{
+    background: #ede2ef;
+    .head{
+      color: #4B5E96;
+    }
+    button{
+      background: #4B5E96;
+      color: white;
+    }
+  }
+
 }
