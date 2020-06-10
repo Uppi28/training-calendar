@@ -9,6 +9,7 @@ import { DataVerifyComponent } from './data-verify/data-verify.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
+import { MyTeamComponent } from './my-team/my-team.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: '', component: MainComponent },
       { path: 'home', component: MyHomeComponent },
       { path: 'trainings', component: MyTrainingsListComponent },
+      { path: 'team', component: MyTeamComponent },
       { path: 'training', component: MyTrainingsComponent },
       { path: 'questionnaire', component: QuestionnaireComponent }
     ]
