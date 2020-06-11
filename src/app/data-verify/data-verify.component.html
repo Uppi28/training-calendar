@@ -8,37 +8,94 @@
 
     <div class="dataRow" *ngFor="let obj of verifications">
         <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 flex align middle justify center height100">
-            <div class="key col-md-12 col-lg-12 col-sm-12 col-xs-12 flex align middle justify center height100 noPadding" 
-                [ngStyle] = "{ color: obj.verified ? '#444492' : 'white', background: obj.verified ? 'white' : '#f86049' }">
+            <div class="key col-md-12 col-lg-12 col-sm-12 col-xs-12 flex align middle justify center height100 noPadding"
+                [ngStyle]="{ color: obj.verified ? '#444492' : 'white', background: obj.verified ? 'white' : '#f86049' }">
                 {{ obj.key }}
             </div>
         </div>
         <div class="compCellsWrap col-md-9 col-lg-9 col-sm-9 col-xs-9 flex align center justify center height100 noPadding white"
-            [ngStyle] = "{background: obj.verified ? 'white' : '#fbe7e8' }">
+            [ngStyle]="{background: obj.verified ? 'white' : '#fbe7e8' }">
             <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10 flex align center justify center height100 noPadding">
-                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                <div
+                    class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
                     <div class="compValueSec">Active Directory</div>
                     <div class="compValue flex align middle justify center">{{ obj.adGroup }}</div>
                 </div>
-                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                <div
+                    class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
                     <div class="compValueSec">Sanofi iLearn</div>
                     <div class="compValue flex align middle justify center">{{ obj.iLearn }}</div>
                 </div>
-                <div class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
+                <div
+                    class="compCells col-md-4 col-lg-4 col-sm-4 col-xs-4 flex align middle justify center dirColumn noPadding">
                     <div class="compValueSec">Workday</div>
                     <div class="compValue flex align middle justify center">{{ obj.workday }}</div>
                 </div>
             </div>
             <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 flex align middle justify center height100 noPadding">
-                <mat-icon class="tick" [ngStyle]="{color: obj.verified ? 'Green' : '#f86049'}">{{ obj.verified ? 'done' : 'cancel' }}</mat-icon>
+                <mat-icon class="tick" [ngStyle]="{color: obj.verified ? 'Green' : '#f86049'}">
+                    {{ obj.verified ? 'done' : 'cancel' }}</mat-icon>
             </div>
         </div>
     </div>
     <div class="flex align middle justify right">
-        <button class="contactSupport flex align middle justify center" (click)="openDialog()">CONTACT SUPPORT</button> 
-        <button class="proceed flex align middle justify center" 
-            [ngStyle] = "{ background: allVerified ? '#4B9726' : 'gray'}"
-            (click)="proceedToQues()">PROCEED</button>
+        <button class="contactSupport flex align middle justify center" (click)="contactSupportClicked()">CONTACT
+            SUPPORT</button>
+        <button class="proceed flex align middle justify center"
+            [ngStyle]="{ background: allVerified ? '#4B9726' : 'gray'}" (click)="proceedClicked()">PROCEED</button>
+
     </div>
-    
+
+</div>
+
+<div id="dataMismatchModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modalDialog" style="padding: 2vh 3vw;">
+        <div class="modal-content modalContent">
+            <div class="modal-body modalBody">
+                <div class="modalHeader flex align middle justify center">
+                    <img src="../../assets/images/waring.png" alt="">
+                    <div>Profile Mismatch Detected</div>
+                </div>
+                <div class="modalContainer modalContainerText">
+                    There is a mismatch in Active Directory and Workday Data. Please click on contact support to
+                    initiate resolution process
+                </div>
+                <div class="modalFooter flex align middle justify center">
+                    <button data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="showEmailModal" class="modal fade" role="dialog">
+    <div class="modal-dialog emailContainer">
+        <div class="modal-content height100">
+            <div class="modal-body flex justify center" style="height: 90%">
+                <img class="emailImg" src="../../assets/images/Picture1.png" alt="">
+            </div>
+            <div class="modal-footer modalFooter flex align middle justify right">
+                <button type="button" class="btn btn-default" (click)="initiateDataCorrection()">Send Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="verificationWip" class="modal fade" role="dialog">
+    <div class="modal-dialog modalDialog" style="padding: 2vh 3vw;">
+        <div class="modal-content modalContent">
+            <div class="modal-body modalBody">
+                <div class="modalHeader flex align middle justify center" style="color: #56569d;">
+                    <div>Profile Under Review</div>
+                </div>
+                <div class="modalContainer modalContainerText">
+                    We have detected a mismatch in your data. Data Rectification process in under review
+                </div>
+            </div>
+            <div class="modalFooter flex align middle justify space-even">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 0 4vw;">Ticket ID: <br> 62382283</button>
+            </div>
+        </div>
+    </div>
 </div>
