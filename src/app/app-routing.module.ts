@@ -10,11 +10,23 @@ import { QuestionnaireComponent } from './questionnaire/questionnaire.component'
 import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
 import { MyTeamComponent } from './my-team/my-team.component';
+import { ManagerComponent } from './manager/manager.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   // { path: 'main', component: MainComponent },
+  { 
+    path: 'manager', component: ManagerComponent ,
+    children: [
+      { path: 'home', component: MyHomeComponent },
+      { path: 'trainings', component: MyTrainingsListComponent },
+      { path: 'team', component: MyTeamComponent },
+      { path: 'training', component: MyTrainingsComponent },
+      { path: 'questionnaire', component: QuestionnaireComponent },
+      { path: '', component: MyHomeComponent },
+    ]
+  },
   {
     path: 'dashboard', component: DashboardComponent,
     children: [

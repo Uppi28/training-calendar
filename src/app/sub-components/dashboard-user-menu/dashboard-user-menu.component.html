@@ -1,6 +1,7 @@
 <div class="user-menu-wrapper">
     <div class="img flex align middle justify center" style="height: 30%; position: relative;">
-        <img src="../../../assets/images/1@2x.png" alt="" srcset="">
+        <img src="../../../assets/images/1@2x.png" alt="" srcset="" [hidden]="manager">
+        <img src="../../../assets/images/manager.PNG" alt="" srcset="" [hidden]="!manager">
     </div>
     <div class="btn-wrapper">
         <div class="flex align middle list" matRipple *ngFor="let menu of userMenu;let i=index;"

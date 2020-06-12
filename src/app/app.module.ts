@@ -26,6 +26,7 @@ import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
 import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.component';
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
 import { MyTeamComponent } from './my-team/my-team.component';
+import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MyTeamComponent } from './my-team/my-team.component';
     MyTrainingsComponent,
     MyCalendarComponent,
     MyTrainingsListComponent,
-    MyTeamComponent
+    MyTeamComponent,
+    ManagerComponent
   ],
   imports: [
     BrowserModule,
