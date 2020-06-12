@@ -15,11 +15,16 @@
 
             .card-title{
                 height: 10%;
-                font-size: 2em;
+                font-size: 2vw;
                 letter-spacing: 4.8px;
                 color: #444492;
                 opacity: 1;
                 font-weight: 550;
+
+                div > span{
+                    font-size: 2vw;
+                    cursor: pointer;
+                }
             }
 
             .card-content{
@@ -35,7 +40,7 @@
                     padding:1vw;
                     .details-header{
                         height:5vh;
-                        font-size: 1.25em;
+                        font-size: 1.2vw;
                         font-weight: 500;
                         border-bottom: 1px solid rgba(211, 211, 211, 0.274);
                         span {
@@ -58,13 +63,18 @@
                                 font: Regular .9em/20px Roboto;
                                 letter-spacing: 0px;
                                 color: #4D4F5C;
-                                opacity: 0.5;;
+                                opacity: 0.5;
+                                font-size: 0.85vw;
                             }
                             .details-val{
                                 font: Bold .9em/25px Roboto;
                                 letter-spacing: 0px;
                                 color: #43425D;
                                 opacity: 1; 
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 0.8vw;
                             }
                         }
                         .align-left{
@@ -99,7 +109,7 @@
                                     letter-spacing: 0px;
                                     color: #4D4F5C;
                                     opacity: 1;
-                                    font-size: 1.25em;
+                                    font-size: 1.2vw;
                                     font-weight: 500;
                                 }
                             }
@@ -123,19 +133,19 @@
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
-                                    // margin-left:-2vw;
                                     
 
                                     .trainer-name{
                                         letter-spacing: 0px;
                                         color: #4D4F5C;
                                         opacity: 1;
-                                        font-size: 1em;
+                                        font-size: 0.9vw;
                                     }
                                     .designation{
                                         letter-spacing: 0px;
                                         color: #4D4F5C;
                                         opacity: 0.5;
+                                        font-size: 0.9vw;
                                     }
                                 }
                             }
@@ -149,8 +159,9 @@
                             padding-top: 3vh;
                             padding-right: 2vh;
 
-                            img{
-                             width:12%
+                            span{
+                            color:#dfc6e3;
+                            font-size: 2vw;
                             }
                         }
 
@@ -176,7 +187,7 @@
                                     letter-spacing: 0px;
                                     color: #4D4F5C;
                                     opacity: 1;
-                                    font-size: 1.25em;
+                                    font-size: 1.2vw;
                                     font-weight: 500;
                                 }
                             }
@@ -186,12 +197,12 @@
                             padding-top:1vw ;
                             color: #4D4F5C;
                             .secondary-heading{
-                                font-size: 1em;
+                                font-size: 0.9vw;
                                 color: #a4a5ab;
                             }
                             p{
                                 padding-top: 1vw ;
-                                font-size: 0.9em;
+                                font-size: 0.9vw;
                                 color: #bebfc4 !important;
 
                             }
@@ -203,7 +214,7 @@
                             display: flex;
                             justify-content: flex-end;
                             align-items: flex-end;
-                            padding: 2vw;
+                            padding: 2.5vw 2vw;
                             .success{
                                 font-size: 1em;
                                 background-color:#4B9726;

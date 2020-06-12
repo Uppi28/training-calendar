@@ -3,7 +3,12 @@
         <div class="training-card">
             <div class="card-title flex align middle justify space-bw">
                 MY TRAINING
-                <button class="back-btn" style="font-size: 0.6em;" routerLink="../trainings"> Back</button>
+                <!-- <button class="back-btn" style="font-size: 0.6em;" routerLink="../trainings"> Back</button> -->
+                <div>
+                    <span class="material-icons" routerLink="../trainings">
+                        reply
+                    </span>
+                </div>
             </div>
             <div class="card-content flex-center">
                 <div class="training-details">
@@ -15,7 +20,8 @@
                             <span class="details-key">Name</span>
                         </div>
                         <div class="details-item align-left">
-                            <span class="details-val"> {{ selectedtraining.training_name }} </span>
+                            <span class="details-val" [matTooltip]="selectedtraining.training_name">
+                                {{ selectedtraining.training_name }} </span>
                         </div>
                     </div>
                     <div class="details-list">
@@ -76,7 +82,9 @@
                             </div>
                         </div>
                         <div class="mail-box">
-                            <img src="../../assets/images/Group 1100.svg" alt="trainer-pic">
+                            <span class="material-icons">
+                                mail_outline
+                            </span>
                         </div>
                     </div>
                     <div class="training-desc">
@@ -86,11 +94,13 @@
                             </div>
                         </div>
                         <div class="training-desc-content">
-                            
-                                <span class="secondary-heading">To educate employees about various promotion techniques</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laboriosam minus repellendus alias optio ex excepturi voluptatibus maxime amet accusamus. Molestiae repudiandae ad officiis velit similique eum temporibus deserunt esse?</p>
-                            
-                          
+                            <span class="secondary-heading">To educate employees about various promotion
+                                techniques</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laboriosam minus
+                                repellendus alias optio ex excepturi voluptatibus maxime amet accusamus. Molestiae
+                                repudiandae ad officiis velit similique eum temporibus deserunt esse?</p>
+
+
                         </div>
                         <div class="butten-section">
                             <button class="success">START TRAINING</button>
