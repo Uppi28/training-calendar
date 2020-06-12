@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard-user-menu.component.scss']
 })
 export class DashboardUserMenuComponent implements OnInit {
+
+  @Input() manager?: boolean;
 
   public userMenu = [{
     label: "My Home",
@@ -50,7 +52,11 @@ export class DashboardUserMenuComponent implements OnInit {
       else
         menu.isSelected = false;
     })
-    this.router.navigate(["dashboard/"+selected.router])
+    if(this.manager) {
+      this.router.navigate(["manager/"+selected.router])
+    } else {
+      this.router.navigate(["dashboard/"+selected.router])
+    }
   }
 
 }
