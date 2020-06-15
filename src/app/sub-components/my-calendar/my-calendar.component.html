@@ -1,18 +1,27 @@
 <div class="calendar-wrapper">
     <div class="header flex align middle">
-        <div class="bold flex justify left" style="width: 40%;text-align: left;">
+        <div class="bold flex justify left" style="width: 40%;text-align: left;" *ngIf="calendarType === 'year'">
+            <div style="margin: 15px;" class="cursorPointer" (click)="toggleNextPreviousYear('previous');"
+            matTooltip="Previous Year"> {{ '<' }} </div>
+            <div style="margin:15px;"> {{ selectedMY.year }} </div>
+            <div style="margin:15px;" (click)="toggleNextPreviousYear('next')" class="cursorPointer"
+            matTooltip="Next Year"> {{ '>' }} </div>
+        </div>
+        <div class="bold flex justify left" style="width: 40%;text-align: left;"  *ngIf="calendarType === 'month'">
             <div style="margin: 15px;" class="cursorPointer" (click)="previousMonth();"
-            matTooltip="Previous month"> {{ '<' }} </div>
+            matTooltip="Previous Month"> {{ '<' }} </div>
             <div style="margin:15px;"> {{ showDate }} </div>
             <div style="margin:15px;" (click)="nextMonth();" class="cursorPointer"
-            matTooltip="Next month"> {{ '>' }} </div>
+            matTooltip="Next Month"> {{ '>' }} </div>
         </div>
 
         <div style="width:60%;text-align: right;">
-            <button class="rm-button-prop" disabled>
+            <button class="rm-button-prop" [ngClass]="{'selected' : calendarType === 'year' }"
+            (click)="toggleView('year')">
                 Year
             </button>
-            <button class="rm-button-prop selected">
+            <button class="rm-button-prop" [ngClass]="{'selected' : calendarType === 'month' }"
+            (click)="toggleView('month')">
                 Month
             </button>
             <button class="rm-button-prop" disabled>
@@ -21,7 +30,7 @@
         </div>
     </div>
 
-    <table class="month-view">
+    <table class="month-view" *ngIf="calendarType === 'month'">
         <thead class="cd-days">
             <tr>
                 <th *ngFor="let day of daysList;">
@@ -48,4 +57,15 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="year-view" *ngIf="calendarType === 'year'">
+            <div *ngFor="let row of monthListObjs;let i = index;" class="row flex">
+                <div *ngFor="let ele of row;let j = index;" class="flex align middle justify center" 
+                [ngClass]="ele.category">
+                        <span class="month"> {{ ele.label }} </span>
+                        <span> {{ selectedMY.year }} </span>
+                        <span class="noTraining"> {{ ele.noTraining }} </span>
+                </div>
+            </div>
+    </div>
 </div>

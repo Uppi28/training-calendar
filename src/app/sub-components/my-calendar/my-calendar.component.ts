@@ -28,8 +28,12 @@ export class MyCalendarComponent implements OnInit {
     'Thu',
     'Fri',
     'Sat'
-  ]
+  ];
 
+  monthList = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+  monthListObjs = [];
+
+  calendarType:string = "year";
 
   ngOnInit(): void {
     this.selectedMY.month = moment(this.todayDate).month() + 1;
@@ -40,7 +44,8 @@ export class MyCalendarComponent implements OnInit {
     this.selectedMY.year = moment(this.todayDate).year();
     this.selectedMY.date = moment(this.todayDate).date();
 
-    this.daysCollector()
+    this.daysCollector();
+    this.monthCollector();
   }
 
   daysCollector() {
@@ -123,6 +128,77 @@ export class MyCalendarComponent implements OnInit {
         let column = value % 7;
         this.groupedArray[row][column].isSelected = true;
       });
+  }
+
+
+  monthCollector(){
+    let globalIndex = 0;
+
+    do {
+      let l_arr = [];
+      for (let index = 0; index < 4; index++) {
+        let no = ((Math.floor(Math.random()*10) + 1) + 2*index);
+        
+        l_arr.push({
+          label : this.monthList[globalIndex],
+          noTraining :  no < 10 ?"0"+ no: no ,
+          id : globalIndex+1,
+          category : "past"
+        })
+        globalIndex++;        
+      }
+      this.monthListObjs.push(l_arr)
+    }
+    while(globalIndex < this.monthList.length);
+
+    this.monthValidator();
+  }
+
+  monthValidator(){
+    let l_currentYear = new Date().getFullYear();
+    let l_currentMonth = new Date().getMonth()+1;
+
+    if(l_currentYear === this.selectedMY.year){
+      this.monthListObjs.forEach(row=>{
+        row.forEach(ele => {
+          if(ele.id === l_currentMonth)
+            ele.category = "present"
+          else if(ele.id < l_currentMonth)
+            ele.category = "past"
+          else if(ele.id > l_currentMonth)
+            ele.category = "future"
+        });
+      })
+    }
+    else if(l_currentYear < this.selectedMY.year){
+      this.monthListObjs.forEach(row=>{
+        row.forEach(ele => {
+          ele.category = "future"
+        });
+      })
+    }
+    else if(l_currentYear > this.selectedMY.year){
+      this.monthListObjs.forEach(row=>{
+        row.forEach(ele => {
+          ele.category = "past"
+        });
+      })
+    }
+
+  }
+
+  toggleNextPreviousYear(type){
+    if(type === "previous")
+      this.selectedMY.year = this.selectedMY.year - 1;
+    else
+      this.selectedMY.year = this.selectedMY.year + 1;
+
+    this.monthValidator();
+  }
+
+  toggleView(type){
+    this.calendarType = type;
+    this.daysCollector()
   }
 
 }

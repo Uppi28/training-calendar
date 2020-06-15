@@ -10,13 +10,13 @@
   // color: white;
 }
 
-// --------------my calendar css---------------
+// --------------my calendar - days view css---------------
 
 .month-view {
-  width: -webkit-fill-available;
+  width: inherit;
   margin-top: 10px;
 }
-table th {
+.month-view th {
   height: 6vw;
   width: 6vw;
   text-align: center;
@@ -111,8 +111,65 @@ button:active {
   box-shadow: unset;
   border: unset;
 }
-.rm-button-prop.selected{
-    background: #444492;
-    color: white;
-    border-radius: 10px;
+.rm-button-prop.selected {
+  background: #444492;
+  color: white;
+  border-radius: 10px;
+}
+
+// ------------------------------- year view--------------------/
+
+.year-view {
+  width: auto;
+  margin-top: 10px;
+}
+.year-view .row {
+  margin: unset;
+  // height: 6vw;
+  text-align: center;
+  div {
+    width: 11vw;
+    height: 11vw;
+    margin: 0.5vw;
+    position: relative;
+    border-radius: 17px;
+    flex-direction: column;
+    &.past {
+      background: #dddddd 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      .noTraining {
+        background: #707070;
+      }
+    }
+    &.present {
+      background: #f5eef7 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      .noTraining {
+        background: #444492;
+      }
+    }
+    &.future {
+      background: #edf4d6 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      .noTraining {
+        background: #444492;
+      }
+    }
+    .month {
+      color: #4b5e96;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .noTraining {
+      position: absolute;
+      bottom: 10px;
+      color: white;
+      right: 10px;
+      font-weight: 500;
+      // font-size: 1.1em;
+      padding: 0.4em;
+      border-radius: 50%;
+    }
+  }
 }
