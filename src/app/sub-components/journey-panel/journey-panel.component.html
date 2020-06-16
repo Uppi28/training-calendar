@@ -7,7 +7,10 @@
 
     <div class="journey-stepper">
         <mat-vertical-stepper #stepper>
-            <mat-step *ngFor="let lineitem of trainersStatus" [completed]="false" state="edit">
+
+            <mat-step *ngFor="let lineitem of trainersStatus;let j=index" [completed]="false" 
+            [state]="j<=5?'edit'+j:'edit'+(j-5)">
+            <!-- [state]="j%2?'edit':'edit1'"> -->
                 <ng-template matStepLabel>
                     <div class="flex justify space-bw">
                         <span class="width50"> {{ lineitem.name }} </span>
@@ -24,8 +27,24 @@
                 </div>
             </mat-step>
             <!-- change default 'edit' icon -->
+
             <ng-template matStepperIcon="edit">
-                <mat-icon>account_circle</mat-icon>
+                <img src="assets/icons/0.png" alt="" srcset="" style="width: 2vw;">
+            </ng-template>
+            <ng-template matStepperIcon="edit1">
+                <img src="assets/icons/1.png" alt="" srcset="" style="width: 2vw;">
+            </ng-template>
+            <ng-template matStepperIcon="edit2">
+                <img src="assets/icons/2.png" alt="" srcset="" style="width: 2vw;">
+            </ng-template>
+            <ng-template matStepperIcon="edit3">
+                <img src="assets/icons/3.png" alt="" srcset="" style="width: 2vw;">
+            </ng-template>
+            <ng-template matStepperIcon="edit4">
+                <img src="assets/icons/4.png" alt="" srcset="" style="width: 2vw;">
+            </ng-template>
+            <ng-template matStepperIcon="edit5">
+                <img src="assets/icons/5.png" alt="" srcset="" style="width: 2vw;">
             </ng-template>
         </mat-vertical-stepper>
     </div>

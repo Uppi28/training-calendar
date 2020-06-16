@@ -6,8 +6,6 @@ export default class Utils {
 
   /*****  NgxSpinnerService Part *****/
   static createSpinnerInstance() {
-    console.log(AppInjector);
-    
     this.spinner = AppInjector.get(NgLoaderService);
   }
 

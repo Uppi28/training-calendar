@@ -31,8 +31,6 @@ export class JourneyPanelComponent implements OnInit {
     });
     this.globalService.getTrainersStatusHttp().subscribe((res:any)=>{
       this.trainersStatus = res;
-      console.log(res);
-      
     })
 
   }

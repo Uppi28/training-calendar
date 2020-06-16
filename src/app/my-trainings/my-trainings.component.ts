@@ -27,10 +27,7 @@ export class MyTrainingsComponent implements OnInit {
         // Defaults to 0 if no query param provided.
         this.id = +params['id'] || 1;
       });
-      console.log(this.id);
       this.getTrainingData();
-
-
   }
 
   getTrainingData(){

@@ -15,8 +15,6 @@ export class MyTrainingsListComponent implements OnInit {
   ngOnInit(): void {
     this.globalService.getTrainingListHttp().subscribe((res:any)=>{
       this.training_list = res;
-      console.log(res);
-      
     })
   }
 

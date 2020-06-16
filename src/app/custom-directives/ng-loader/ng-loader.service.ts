@@ -12,8 +12,6 @@ export class NgLoaderService {
   public spinner = "<div class='lds-dual-ring'></div>"
 
   show(){
-    console.log("j");
-    
     let div = document.createElement('div');
     div.setAttribute('id','ng-loader');
     div.innerHTML = this.spinner;
