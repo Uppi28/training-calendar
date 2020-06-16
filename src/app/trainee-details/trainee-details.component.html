@@ -1,0 +1,95 @@
+<div class="trainings-container">
+    <div class="training-content">
+        <div class="training-container">
+            <div class="header-section">
+                <div class="sub-title-section">
+                    <div>
+                        <span>
+                            US Training on Promotion
+                        </span>
+                        <span class="material-icons add-button">
+                            add_circle
+                        </span>
+                    </div>
+                    <div class="title-sec">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem, enim at ex
+                            labore consectetur aspernatur itaque dicta molestiae corporis eveniet suscipit sit
+                            voluptate, reiciendis beatae aliquam sunt temporibus sequi?
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="trainee-list">
+                <div class="trainee-card" *ngFor="let item of trainee_list">
+                    <div class="profile-sec flex-center">
+                        <div class="details-sec">
+                            <div class="pic-secion">
+                                <img [src]="item.img_url" alt="trainee-pic">
+                            </div>
+                            <div class="name-section">
+                                <span class="trainer-name">{{item?.name}}</span>
+                                <span class="designation">{{item?.desig}}</span>
+                            </div>
+                        </div>
+                        <div class="icon-sec">
+                            <div class="icon-cont flex-center">
+                                <div class="phone-call">
+                                    <span class="material-icons">
+                                        call
+                                    </span>
+                                </div>
+                                <div class="mail-box">
+                                    <span class="material-icons">
+                                        mail_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-sec flex-center">
+                        <div class="info flex-center">
+                            <div class="detail-button flex-center left-border">
+                                <div class="icon-sec flex-center">
+                                    <span class="material-icons">
+                                        alarm_add
+                                    </span>
+                                </div>
+                                <div class="name-sec flex-center">
+                                    <span class="upper-sec">Assigned On</span>
+                                    <span class="lower-sec">{{item?.assignedOn}}</span>
+                                </div>
+                            </div>
+                            <div class="detail-button flex-center">
+                                <div class="icon-sec flex-center">
+                                    <span class="material-icons">
+                                        av_timer
+                                    </span>
+                                </div>
+                                <div class="name-sec flex-center">
+                                    <span class="upper-sec">Due Date</span>
+                                    <span class="lower-sec">{{item?.dueDate}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-sec flex-center">
+                            <button class="trainee-button" style="width:40%">
+                                <span class="material-icons">
+                                    highlight_off
+                                </span>
+                                Remove
+                            </button>
+                            <button class="trainee-button blue-btn" style="width:55%">
+                                <span class="material-icons">
+                                    autorenew
+                                </span>
+                                Remind Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="empty-content"></div>
+</div>

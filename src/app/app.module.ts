@@ -27,6 +27,8 @@ import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.co
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { ManagerComponent } from './manager/manager.component';
+import { TrainerViewComponent } from './trainer-view/trainer-view.component';
+import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { ManagerComponent } from './manager/manager.component';
     MyCalendarComponent,
     MyTrainingsListComponent,
     MyTeamComponent,
-    ManagerComponent
+    ManagerComponent,
+    TrainerViewComponent,
+    TraineeDetailsComponent
   ],
   imports: [
     BrowserModule,

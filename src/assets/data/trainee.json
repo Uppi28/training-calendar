@@ -1,0 +1,31 @@
+[
+    {
+        "name":"AUGUSTINA THIESSEN",
+        "desig":"Executive",
+        "img_url":"../../assets/icons/0.png",
+        "assignedOn":"12 May 2020",
+        "dueDate":"22 May 2020"
+        
+    },
+    {
+        "name":"IRENE UGARTE",
+        "desig":"Revenue Management Executive",
+        "img_url":"../../assets/icons/4.png",
+        "assignedOn":"12 June 2020",
+        "dueDate":"22 June 2020"
+    },
+    {
+        "name":"SHA DOBBIS",
+        "desig":"HIPPA Professional",
+        "img_url":"../../assets/icons/3.png",
+        "assignedOn":"12 April 2020",
+        "dueDate":"22 April 2020"
+    },
+    {
+        "name":"CAROLL FRIPPDAINE BEILER",
+        "desig":"Resedential Appraiser",
+        "img_url":"../../assets/icons/5.png",
+        "assignedOn":"12 Jan 2020",
+        "dueDate":"22 Jan 2020"
+    }
+]

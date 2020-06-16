@@ -1,0 +1,85 @@
+<div class="trainings-container">
+    <div class="training-content">
+        <div class="training-container">
+            <div class="header-section">
+                <div class="sub-title-section">
+                    <span>
+                       TRAINER VIEW
+                    </span>
+                </div>
+            </div>
+            <div class="training-list-section">
+                <div class="training-details-card" *ngFor="let item of training_list">
+                    <div class="sub-title flex-center">
+                        <div class="title "><span class="elipsis-nw">{{item?.training_name}}</span></div>
+                        <div class="buttons">
+                            <span class="material-icons">
+                                bar_chart
+                            </span>
+                            <span class="material-icons">
+                                create
+                                </span>
+                        </div>
+                    </div>
+                    <div class="content-main elipsis-2">
+                        <span>
+                            {{item?.sub_desc}}
+                        </span>
+                    </div>
+                    <div class="content-secondary elipsis-4">
+                        <span >{{item?.desc}}</span>
+                    </div>
+                    <div class="button-section flex-center">
+                        <div class="icon-sec flex-center">
+                            <div class="duration">
+                                <div class="i-con flex-center">
+                                    <span class="material-icons">
+                                        update
+                                    </span>
+                                </div>
+                                <div class="i-text flex-center">
+                                    <span>Duration</span>
+                                </div>
+                                <div class="duration flex-center">
+                                    <span>
+                                        {{item?.length_of_training}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <div class="i-con flex-center">
+                                    <span class="material-icons">
+                                        chrome_reader_mode
+                                    </span>
+                                </div>
+                                <div class="i-text flex-center">
+                                    <span>Training Tool</span>
+                                </div>
+                                <div class="duration flex-center">
+                                    <span>
+                                        {{item?.tool_name}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="detailed-view">
+                            <button class="detail-button flex-center">
+                                <div class="icon-sec flex-center">
+                                    <span class="material-icons">
+                                        bubble_chart
+                                    </span>
+                                </div>
+                                <div class="name-sec flex-center">
+                                    <span class="upper-sec">Detailed View</span>
+                                    <span class="lower-sec">Trainees Assigned</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="empty-content"></div>
+</div>

@@ -8,7 +8,9 @@
         "status": "overdue",
         "length_of_training" : "120 Minutes",
         "start_date" : "5th Jul,2020",
-        "id" : 1
+        "id" : 1,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about Annual Disclosure"
     },
     {
         "training_name": "US Training on Promotion",
@@ -19,7 +21,9 @@
         "status": "overdue",
         "length_of_training" : "120 Minutes",
         "start_date" : "10th Jul,2020",
-        "id" : 2
+        "id" : 2,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Promotion"
     },
     {
         "training_name": "US Training on Interactions between Medical and Commercial Personnel",
@@ -30,7 +34,9 @@
         "status": "incomplete",
         "length_of_training" : "100 Minutes",
         "start_date" : "15th Jul,2020",
-        "id" : 3
+        "id" : 3,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Interactions"
 
     },
     {
@@ -42,7 +48,9 @@
         "status": "incomplete",
         "length_of_training" : "80 Minutes",
         "start_date" : "25th Jul,2020",
-        "id" : 4
+        "id" : 4,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Meals"
     },
     {
         "training_name": "US Training on Engagement",
@@ -53,7 +61,9 @@
         "status": "incomplete",
         "length_of_training" : "120 Minutes",
         "start_date" : "2nd Aug,2020",
-        "id" : 5
+        "id" : 5,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Engagement"
     },
     {
         "training_name": "US Training on Pharma Science",
@@ -64,7 +74,9 @@
         "status": "upcoming",
         "length_of_training" : "170 Minutes",
         "start_date" : "5th Jul,2020",
-        "id" : 6
+        "id" : 6,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Pharma Science"
     },
     {
         "training_name": "US Training on Sanofi US and Genzyme Corporate Integrity Agreement",
@@ -75,6 +87,8 @@
         "status": "upcoming",
         "length_of_training" : "120 Minutes",
         "start_date" : "5th Jul,2020",
-        "id" : 7
+        "id" : 7,
+        "tool_name":"iLearn",
+        "sub_desc":"To educate employees about US Training on Sanofi"
     }
 ]

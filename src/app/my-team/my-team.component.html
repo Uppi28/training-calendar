@@ -90,17 +90,17 @@
                 </div>
             </div>
             <div class="team-member-section">
-                <div class="team-member-card red-card">
+                <div class="team-member-card red-card" *ngFor="let member of teamMembers">
                     <div class="member-section flex-center">
                         <div class="profile-pic">
-                            <img src="../../assets/icons/1.png" alt="profile-pic">
+                            <img [src]="member.img_url" alt="profile-pic">
                         </div>
                         <div class="member-name">
                             <div class="name">
-                                <span>TOBIAS MORRISEY</span>
+                                <span>{{member?.name}}</span>
                             </div>
                             <div class="desig">
-                                <span>Executive</span>
+                                <span [matTooltip]="member?.desig">{{member?.desig}}</span>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-member-card red-card">
+                <!-- <div class="team-member-card red-card">
                     <div class="member-section flex-center">
                         <div class="profile-pic">
                             <img src="../../assets/icons/1.png" alt="profile-pic">
@@ -314,7 +314,7 @@
                             <button class="training"> Trainings</button>
                         </div>
                     </div>
-                </div>               
+                </div>                -->
             </div>
         </div>
     </div>

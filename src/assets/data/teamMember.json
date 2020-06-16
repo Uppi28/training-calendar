@@ -1,0 +1,22 @@
+[
+    {
+        "name":"AUGUSTINA THIESSEN",
+        "desig":"Executive",
+        "img_url":"../../assets/icons/0.png"
+    },
+    {
+        "name":"IRENE UGARTE",
+        "desig":"Revenue Management Executive",
+        "img_url":"../../assets/icons/4.png"
+    },
+    {
+        "name":"SHA DOBBIS",
+        "desig":"HIPPA Professional",
+        "img_url":"../../assets/icons/3.png"
+    },
+    {
+        "name":"CAROLL FRIPPDAINE BEILER",
+        "desig":"Resedential Appraiser",
+        "img_url":"../../assets/icons/5.png"
+    }
+]

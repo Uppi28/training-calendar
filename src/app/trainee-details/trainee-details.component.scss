@@ -1,0 +1,270 @@
+.trainings-container{
+    width:100%;
+    height:100%;
+    display: flex;
+
+    .training-content{
+        flex:auto;
+        padding: 2vw;
+        .training-container{
+            background-color: #fafafa;
+            border-radius: 30px;
+            min-height: 50vh;
+            padding:3vw 4vw;
+            padding-right: 8vw;
+
+            .header-section{
+                height: 7vh;
+                display: flex;
+
+                .sub-title-section{
+                    width: 100%;
+                    padding:0.5vw 0;
+
+                    span{
+                        font-size: 2.2vw;
+                        letter-spacing: 2.5px;
+                        color: #444492;
+                        opacity: 1;
+                        font-weight: 500;
+                    }
+
+                    .title-sec{
+                        line-height: 10px;
+                        padding-top: 0.3vw;
+                        span{
+                            font-size: 0.6vw;
+                            color: #43425dc2;
+                            letter-spacing: 1px;
+                            
+                        }
+                    }
+                }
+                .title-button-section{
+                    width: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding-top: 1vh;
+
+                    .overdue{
+                        background-color: #f86049;
+                        color:#fff;
+                        border:none;
+                        border-radius: 10px;
+                        box-shadow: 2px 2px 4px rgba(148, 147, 147, 0.829);
+                        padding:0.25vw 2vw;
+                        font-size: 0.80vw;
+                        font-weight: 550;
+                        width: 8vw;
+                        
+                    }
+                    .incomplete{
+                        background-color: #e8e9f3;
+                        color:#515099;
+                        border:none;
+                        border-radius: 10px;
+                        box-shadow: 2px 2px 4px rgba(148, 147, 147, 0.829);
+                        padding:0.25vw 1.5vw;
+                        font-size: 0.80vw;
+                        font-weight: 550;
+                        margin-left:2vw;
+                        width: 8vw;
+                    }
+                }
+            }
+
+            .trainee-list{
+                margin-top:2vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+
+                .trainee-card{
+                    width:47%;
+                    box-shadow: 0px 3px 6px #00000029;
+                    border-radius: 1vw;
+                    background-color: #fff;
+                    height:8vw;
+                    padding: 1vw;
+                    margin-bottom: 2vw;
+
+                    .profile-sec{
+                        height:60%;
+                        width:100%;
+                        padding: 0 1vw;
+                        .details-sec{
+                            width: 85%;
+                            height: 100%;
+
+                            display: flex;
+                            height: 100%;
+
+                                .pic-secion{
+                                    width:23%;
+                                    height: 100%;
+                                    padding:0;
+                                    img{
+                                        height:100%;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .name-section{
+                                    width:77%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    
+
+                                    .trainer-name{
+                                        letter-spacing: 0px;
+                                        color: #4D4F5C;
+                                        opacity: 1;
+                                        font-size: 0.8vw;
+                                    }
+                                    .designation{
+                                        letter-spacing: 0px;
+                                        color: #4D4F5C;
+                                        opacity: 0.5;
+                                        font-size: 0.8vw;
+                                    }
+                                }   
+                        }
+                        .icon-sec{
+                            width: 15%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-start;
+                            padding-top: 0.65vw;
+                            .icon-cont{
+                                height:1.4vw;
+                                width:5vw;
+                                span{
+                                    font-size: 1vw;
+                                    color: #B4B4B4;
+                                }
+                                .phone-call{
+                                    width:50%
+                                }
+                                .mail-box{
+                                    width:50%
+                                }
+                            }
+                        }
+                    }
+                    .button-sec{
+                        height:40%;
+                        padding-top: 0.25vw;
+                        .info{
+                            width:55%;
+                            .detail-button{
+                                padding-left: 0.5vw;
+                                width:50%;
+                                height: 100%;
+                                padding-top: 0.25vw;
+                                .icon-sec{
+                                    width:25%;
+                                    height:100%;
+                                    span{
+                                        color:#43425dc2;
+                                        font-size: 1.2vw;
+                                    }
+                                }
+                                .name-sec{
+                                    width:75%;
+                                    height:100%;
+                                    flex-direction: column;
+                                    position: relative;
+                                    .upper-sec{
+                                        height: 60%;
+                                        width: 100%;
+                                        font-size: 0.6vw;
+                                        color:#43425dc2;
+                                        position: absolute;
+                                        top:-0.95vw;
+                                        left:0.25vw;
+                                    }
+                                    .lower-sec{
+                                        height: 40%;
+                                        width: 100%;
+                                        font-size: 0.5vw;
+                                        color:#43425dc2;
+                                        position: absolute;
+                                        top: -0.20vw;
+                                        left:0.25vw;
+                                    }
+                                }
+                            }
+                            .left-border{
+                                border-right: 1px solid lightgray;
+                            }
+                        }
+                        .btn-sec{
+                            width:45%;
+                            padding:1vw;
+                            justify-content: space-between;
+
+                            .trainee-button{
+                                // width: 45%;
+                                box-shadow: 0px 3px 6px #00000029;
+                                border-radius: 1vw;
+                                border: none;
+                                font-size: 0.6vw;
+                                background-color: #fff;
+                                position: relative;
+                                padding-left: 1vw;
+                                .material-icons{
+                                    font-size: 100%;
+                                    position: absolute;
+                                    top: 0.4vw;
+                                    left: 0.5vw;
+                                }
+                            }
+                            .blue-btn{
+                                background-color: #444492; 
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+
+           
+        }
+    }
+    .empty-content{
+        flex:0 0 11.5vw;
+    }
+} 
+
+.box-card{
+        background-color: #fff;
+        box-shadow: 2px 2px 4px rgba(148, 147, 147, 0.829);
+        padding: 2vw;
+        width:22.5%;  
+        border-radius: 30px;
+}
+
+.yellow-active{
+    border-radius: 35%;
+    background-color: #fec436;
+    padding:0.15vw 0.5vw;
+    box-shadow: 2px 2px 4px rgba(148, 147, 147, 0.829);
+    span{
+        color: #fff !important;
+        font-weight: 800;
+    }
+}
+
+.add-button{
+    position: relative;
+    left:32.5vw;
+    top:0.5vw;
+    font-size: 1.8vw !important;
+}
