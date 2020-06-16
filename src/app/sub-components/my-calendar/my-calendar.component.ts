@@ -33,7 +33,8 @@ export class MyCalendarComponent implements OnInit {
   monthList = ["January","February","March","April","May","June","July","August","September","October","November","December"]
   monthListObjs = [];
 
-  calendarType:string = "year";
+  showPopup:boolean = false;
+  calendarType:string = "month";
 
   ngOnInit(): void {
     this.selectedMY.month = moment(this.todayDate).month() + 1;
@@ -98,8 +99,6 @@ export class MyCalendarComponent implements OnInit {
     this.baseArray.forEach(ba => {
       if ([1, 4, 6, 7, 8, 10, 17].includes(ba.value))
         ba.arrContainer = [1]
-      else if ([23, 2, 18].includes(ba.value))
-        ba.arrContainer = [1, 1]
     })
   }
 
@@ -130,6 +129,15 @@ export class MyCalendarComponent implements OnInit {
       });
   }
 
+  showTraining(id){
+    let dotEle = document.getElementById(id);
+    dotEle.style.display = "block";
+  }
+
+  hidePopUp(id){
+    let dotEle = document.getElementById(id);
+    dotEle.style.display = "none";
+  }
 
   monthCollector(){
     let globalIndex = 0;

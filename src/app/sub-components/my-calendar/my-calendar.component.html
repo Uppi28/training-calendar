@@ -2,26 +2,26 @@
     <div class="header flex align middle">
         <div class="bold flex justify left" style="width: 40%;text-align: left;" *ngIf="calendarType === 'year'">
             <div style="margin: 15px;" class="cursorPointer" (click)="toggleNextPreviousYear('previous');"
-            matTooltip="Previous Year"> {{ '<' }} </div>
+                matTooltip="Previous Year"> {{ '<' }} </div>
             <div style="margin:15px;"> {{ selectedMY.year }} </div>
             <div style="margin:15px;" (click)="toggleNextPreviousYear('next')" class="cursorPointer"
-            matTooltip="Next Year"> {{ '>' }} </div>
+                matTooltip="Next Year"> {{ '>' }} </div>
         </div>
-        <div class="bold flex justify left" style="width: 40%;text-align: left;"  *ngIf="calendarType === 'month'">
-            <div style="margin: 15px;" class="cursorPointer" (click)="previousMonth();"
-            matTooltip="Previous Month"> {{ '<' }} </div>
+        <div class="bold flex justify left" style="width: 40%;text-align: left;" *ngIf="calendarType === 'month'">
+            <div style="margin: 15px;" class="cursorPointer" (click)="previousMonth();" matTooltip="Previous Month">
+                {{ '<' }} </div>
             <div style="margin:15px;"> {{ showDate }} </div>
-            <div style="margin:15px;" (click)="nextMonth();" class="cursorPointer"
-            matTooltip="Next Month"> {{ '>' }} </div>
+            <div style="margin:15px;" (click)="nextMonth();" class="cursorPointer" matTooltip="Next Month"> {{ '>' }}
+            </div>
         </div>
 
         <div style="width:60%;text-align: right;">
             <button class="rm-button-prop" [ngClass]="{'selected' : calendarType === 'year' }"
-            (click)="toggleView('year')">
+                (click)="toggleView('year')">
                 Year
             </button>
             <button class="rm-button-prop" [ngClass]="{'selected' : calendarType === 'month' }"
-            (click)="toggleView('month')">
+                (click)="toggleView('month')">
                 Month
             </button>
             <button class="rm-button-prop" disabled>
@@ -48,10 +48,36 @@
                     [ngClass]="{'active':ele.isSelected,'disable':ele.isDisabled,'blackList':ele.isBlackList}">
                     <div>
                         <span *ngIf="ele.isDisabled">{{ ele.value }}</span>
-                        <span *ngIf="!ele.isDisabled" >{{ ele.value }}</span>
-                        <span style="font-size: 2em;color:white" *ngIf="ele.arrContainer.length === 0">.</span>
-                        <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 1">.</span>
-                        <span style="font-size: 2em;" *ngIf="ele.arrContainer.length === 2">..</span>
+                        <span *ngIf="!ele.isDisabled">{{ ele.value }}</span>
+                        <span style="font-size: 2em;color:white;visibility: hidden;" 
+                        *ngIf="ele.arrContainer.length === 0">.</span>
+                        <span style="font-size: 2em;position: relative;" *ngIf="ele.arrContainer.length === 1"
+                        (mouseover)="showTraining(i+''+j)" 
+                        (mouseout)="hidePopUp(i+''+j)">.
+                        <div class="hover-container" id="hoverContainer" style="display: none;" [id]="i + '' +j">
+                            <div class="flex">
+                                <div style="width: 60%;text-align: left;">
+                                    <div class="title">Trainings:</div>
+                                    <div style="font-weight: 300;">US Training on Medical Scientific Communications and Interactions with Healthcare Professionals and Payer Entities</div>
+                                </div>
+                                <div style="width: 40%;text-align: left;">
+                                    <div class="title">Owners</div>
+                                    <div class="trainer-box flex" style="font-weight: 300;">
+                                        <img src="assets/icons/0.png" alt="" srcset="" style="margin-right: 8px;">
+                                        <div>
+                                            <div>Christina Headly</div>
+                                            <div>Sanofi US LLC</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex align middle" style="color: grey;">
+                                        <mat-icon style="margin-right: 10px;">access_time </mat-icon>
+                                       <span> Scheduled for 13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="triangle-left"></div>
+                        </div>
+                    </span>
                     </div>
                 </th>
             </tr>
@@ -59,13 +85,14 @@
     </table>
 
     <div class="year-view" *ngIf="calendarType === 'year'">
-            <div *ngFor="let row of monthListObjs;let i = index;" class="row flex">
-                <div *ngFor="let ele of row;let j = index;" class="flex align middle justify center" 
+        <div *ngFor="let row of monthListObjs;let i = index;" class="row flex">
+            <div *ngFor="let ele of row;let j = index;" class="flex align middle justify center"
                 [ngClass]="ele.category">
-                        <span class="month"> {{ ele.label }} </span>
-                        <span> {{ selectedMY.year }} </span>
-                        <span class="noTraining"> {{ ele.noTraining }} </span>
-                </div>
+                <span class="month"> {{ ele.label }} </span>
+                <span> {{ selectedMY.year }} </span>
+                <span class="noTraining"> {{ ele.noTraining }} </span>
             </div>
+        </div>
     </div>
 </div>
+

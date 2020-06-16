@@ -173,3 +173,42 @@ button:active {
     }
   }
 }
+
+.hover-container {
+  z-index: 3;
+  top: 0px;
+  left: 5vw;
+  font-size: 0.38em;
+  background: #f7f7f7 0% 0% no-repeat padding-box;
+  color: #444492;
+  border-radius: 12px;
+  padding: 23px 8px 15px 30px;
+  width: 30vw;
+  position: absolute;
+  // top: 50vh;
+  .title {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 9px;
+  }
+  .trainer-box {
+    border-bottom: 1px solid #c1c1c1;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+  img {
+    width: 3vw;
+  }
+}
+
+#triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 1vw solid transparent;
+  border-right: 1vw solid #f7f7f7;
+  border-bottom: 1vw solid transparent;
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: -10px;
+}
