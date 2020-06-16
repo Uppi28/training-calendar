@@ -52,20 +52,22 @@
                         <span style="font-size: 2em;color:white;visibility: hidden;" 
                         *ngIf="ele.arrContainer.length === 0">.</span>
                         <span style="font-size: 2em;position: relative;" *ngIf="ele.arrContainer.length === 1"
-                        (mouseover)="showTraining(i+''+j)" 
+                        (mouseover)="showTraining(i+''+j)"
                         (mouseout)="hidePopUp(i+''+j)">.
-                        <div class="hover-container" id="hoverContainer" style="display: none;" [id]="i + '' +j">
+                        <div class="hover-container" id="hoverContainer" style="display: none;" [id]="i + '' +j"
+                        *ngIf="ele.arrContainer.length === 1" >
                             <div class="flex">
-                                <div style="width: 60%;text-align: left;">
+                                <div style="width: 60%;text-align: left;" routerLink="../training" 
+                                [queryParams]="{ id: ele.trainingData.id }">
                                     <div class="title">Trainings:</div>
-                                    <div style="font-weight: 300;">US Training on Medical Scientific Communications and Interactions with Healthcare Professionals and Payer Entities</div>
+                                    <div style="font-weight: 300;"> {{ ele['trainingData']['training_name'] }}  </div>
                                 </div>
                                 <div style="width: 40%;text-align: left;">
                                     <div class="title">Owners</div>
                                     <div class="trainer-box flex" style="font-weight: 300;">
-                                        <img src="assets/icons/0.png" alt="" srcset="" style="margin-right: 8px;">
+                                        <img src="assets/icons/{{ ele.trainingData.dp }}" alt="" srcset="" style="margin-right: 8px;">
                                         <div>
-                                            <div>Christina Headly</div>
+                                            <div> {{ ele.trainingData.trainer_name }} </div>
                                             <div>Sanofi US LLC</div>
                                         </div>
                                     </div>

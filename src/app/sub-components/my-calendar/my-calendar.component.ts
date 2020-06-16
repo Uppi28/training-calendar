@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { GlobalService } from 'src/app/global.service';
 
 @Component({
   selector: 'app-my-calendar',
@@ -8,7 +9,7 @@ import * as moment from 'moment';
 })
 export class MyCalendarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globalService : GlobalService) { }
   baseArray = [];
   groupedArray = [];
   selectedMY = {
@@ -47,6 +48,7 @@ export class MyCalendarComponent implements OnInit {
 
     this.daysCollector();
     this.monthCollector();
+
   }
 
   daysCollector() {
@@ -64,7 +66,8 @@ export class MyCalendarComponent implements OnInit {
         isSelected: false,
         isDisabled: false,
         isBlackList: false,
-        arrContainer: []
+        arrContainer: [],
+        trainingData: {}
       }
     })
     for (let i = 1; i <= this.currentDays; i++) {
@@ -77,7 +80,8 @@ export class MyCalendarComponent implements OnInit {
         isSelected: false,
         isDisabled: false,
         isBlackList: false,
-        arrContainer: []
+        arrContainer: [],
+        trainingData: {}
       }
     }), ...this.baseArray];
 
@@ -93,13 +97,23 @@ export class MyCalendarComponent implements OnInit {
       this.groupedArray[j] = this.baseArray.slice(index, index + 7);
     }
     this.colouringDays();
+
+    // console.log(this.groupedArray);
+    
   }
 
   fillDots() {
-    this.baseArray.forEach(ba => {
-      if ([1, 4, 6, 7, 8, 10, 17].includes(ba.value))
-        ba.arrContainer = [1]
+    this.globalService.getTrainingListHttp().subscribe(res=>{
+      let index = 0;
+      this.baseArray.forEach(ba => {
+        if ([1, 4, 6, 7, 8, 10, 17].includes(ba.value)){
+          ba.arrContainer = [1];
+          ba.trainingData = res[index];
+          index++;
+        }
+      })      
     })
+
   }
 
   previousMonth() {
