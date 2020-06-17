@@ -10,7 +10,7 @@
                     cillum</div>
             </div>
             <div class="trainingContainer row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let trainee of trainees">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let trainee of trainees;let i=index;">
                     <div class="traineeCard col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="traineeBody flex justify space-bw align middle">
                             <div class="flex align middle justify left">
@@ -45,7 +45,8 @@
                             
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding height100">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 height100 flex align bottom" style="padding: 0 0.5vw">
-                                    <div class="traineeBtn flex justify center align middle width100">
+                                    <div class="traineeBtn flex justify center align middle width100 cursorPointer" 
+                                    (click)="removeItem(i,trainee)">
                                         <img src="../../assets/images/remove.PNG" alt="">
                                         <div>Remove</div>
                                     </div>

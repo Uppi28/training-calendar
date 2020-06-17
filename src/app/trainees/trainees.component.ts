@@ -13,8 +13,10 @@ export class TraineesComponent implements OnInit {
   trainees = traineeList;
 
   ngOnInit(): void {
-    console.log(traineeList);
-    
+  }
+
+  removeItem(index,item){
+    this.trainees.splice(index,1);
   }
 
 }
