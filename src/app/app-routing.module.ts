@@ -20,24 +20,6 @@ import { TrainingAnalyticsComponent } from './training-analytics/training-analyt
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  // { path: 'main', component: MainComponent },
-  { 
-    path: 'manager', component: ManagerComponent ,
-    children: [
-      { path: 'home', component: MyHomeComponent },
-      { path: 'trainings', component: MyTrainingsListComponent },
-      { path: 'team', component: MyTeamComponent },
-      { path: 'training', component: MyTrainingsComponent },
-      { path: 'questionnaire', component: QuestionnaireComponent },
-      // { path: 'trainer-view', component: TrainerViewComponent },
-      // { path: 'trainee-details-view', component: TraineeDetailsComponent },
-      { path: 'trainer', component: TrainerComponent },
-      { path: 'trainees', component: TraineesComponent },
-      { path: 'training-analytics', component: TrainingAnalyticsComponent},
-      { path: '', component: MyHomeComponent },
-      
-    ]
-  },
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
