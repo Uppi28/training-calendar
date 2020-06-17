@@ -95,7 +95,8 @@ export class DashboardUserMenuComponent implements OnInit {
     }else{
       this.menuList = this.traineeView
     }
-    this.menuList[0].isSelected = true;
+    // this.menuList
+    this.menuSelected(this.menuList[0])
   }
   menuSelected(selected) {
     this.menuList.forEach(d => {
