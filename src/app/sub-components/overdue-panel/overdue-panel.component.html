@@ -2,13 +2,14 @@
     <div class="title bold" style="padding : 10px 5px">OVERDUE Trainings</div>
     <div style="overflow: auto;height: 80%;" class="width100">
         <div class="od-row flex align middle justify center padding10" *ngFor="let row of trainings">
-            <div class="ellipsis" style="width: 60%;"> {{ row.label }}  </div>
-            <div class="flex align middle justify left ellipsis" style="width: 40%;">
-                <div class="link cursorPointer" matTooltip="Visit Training Page">link</div>
-                <mat-icon class="" style="font-size: 18px;padding: 3px;">account_circle</mat-icon>
+            <div class="ellipsis" style="width: 50%;"
+            [matTooltip]="row.label"> {{ row.label }}  </div>
+            <div class="flex align middle justify left ellipsis" style="width: 50%;">
+                <div class="link cursorPointer" matTooltip="Visit Training Page">Open Training</div>
+                <!-- <mat-icon class="" style="font-size: 18px;padding: 3px;">account_circle</mat-icon> -->
+                <img src="assets/icons/0.png" alt="" srcset="" style="width: 2vw;padding: 3px;">
                 <div class="ellipsis"> {{  row.trainer }} </div>
             </div>
         </div>
     </div>
-
 </div>

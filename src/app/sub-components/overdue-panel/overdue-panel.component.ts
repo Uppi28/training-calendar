@@ -26,7 +26,7 @@ export class OverduePanelComponent implements OnInit {
     trainer : "Alex Mandrake"
   },
   {
-    label : "US Training on Promotion",
+    label : "US Code of Ethics Training and Annual Disclosure",
     trainer : "Alex Mandrake"
   },
   {
