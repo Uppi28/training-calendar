@@ -23,7 +23,6 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      { path: '', component: MainComponent },
       { path: 'home', component: MyHomeComponent },
       { path: 'trainings', component: MyTrainingsListComponent },
       { path: 'team', component: MyTeamComponent },
@@ -32,16 +31,17 @@ const routes: Routes = [
       { path: 'trainer', component: TrainerComponent },
       { path: 'trainees', component: TraineesComponent },
       { path: 'training-analytics', component: TrainingAnalyticsComponent},
+      { path: '', component: MainComponent },
       // { path: 'trainer-view', component: TrainerViewComponent },
       // { path: 'trainee-details-view', component: TraineeDetailsComponent },
     ]
-  },
+  }, 
   
   { path: '', component: LoginComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash : true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
