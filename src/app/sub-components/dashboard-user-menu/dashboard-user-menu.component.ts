@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgLoaderService } from 'src/app/custom-directives/ng-loader/ng-loader.service';
 
 @Component({
   selector: 'app-dashboard-user-menu',
@@ -81,7 +82,7 @@ export class DashboardUserMenuComponent implements OnInit {
 
   menuList
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,public loader : NgLoaderService) { }
 
   ngOnInit(): void {
     this.menuList = this.managerMenu
@@ -112,7 +113,12 @@ export class DashboardUserMenuComponent implements OnInit {
     // }else{
     //   this.router.navigate(["dashboard/"+selected.router])
     // }
+    this.loader.show()
+    setTimeout(() => {
+      this.loader.hide()
+    }, 300);
     this.router.navigate(["dashboard/"+selected.router])
+    
   }
 
 }

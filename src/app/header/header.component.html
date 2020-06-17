@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 noPadding flex align middle justify center bold appName">
         SOAR TRAINING PORTAL
-        <mat-form-field id="select-user" floatLabel=never>
+        <mat-form-field id="select-user" floatLabel=never *ngIf="hideUserselectToggle">
             <mat-label>Select User</mat-label>
             <mat-select [(ngModel)]="selectedValue" (selectionChange)="setUser($event)" >
                 <mat-option *ngFor="let user of userList" [value]="user.value">
