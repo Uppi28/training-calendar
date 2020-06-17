@@ -168,3 +168,30 @@ html, body {
       transform: rotate(360deg);
     }
   }
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+
+//   scroll Bar
+::-webkit-scrollbar {
+    width: 0.5vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(197, 197, 197); 
+    border-radius: 2vw;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(163, 163, 163); 
+  }

@@ -29,6 +29,10 @@ import { MyTeamComponent } from './my-team/my-team.component';
 import { ManagerComponent } from './manager/manager.component';
 import { TrainerViewComponent } from './trainer-view/trainer-view.component';
 import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
+import { TrainerComponent } from './trainer/trainer.component';
+import { TraineesComponent } from './trainees/trainees.component';
+import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,10 @@ import { TraineeDetailsComponent } from './trainee-details/trainee-details.compo
     MyTeamComponent,
     ManagerComponent,
     TrainerViewComponent,
-    TraineeDetailsComponent
+    TraineeDetailsComponent,
+    TrainerComponent,
+    TraineesComponent,
+    TrainingAnalyticsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,93 @@
+.mainWrap{
+    padding: 3vw;
+    .analyticsViewWrap{
+        background: #dfc6e326;
+        border-radius: 2vw;
+        padding: 5vh 3vw;
+        box-shadow: 0px 3px 6px #00000029;
+        .headWrap{
+            color: #444492;
+            font-size: 1.5vw;
+            margin-bottom: 3vh;
+        }
+        .bodyWrap {
+            .chartHolder {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 10px #00000014;
+                border-radius: 8px;
+                margin-bottom: 3vh;
+                padding: 1vw;
+                height: 50vh;
+                overflow: auto;
+                .chartBody {
+                    border-bottom: 1px solid #CECECE;
+                    padding: 2vh 0;
+                    .viewDets {
+                        background: #444492 0% 0% no-repeat padding-box;
+                        border-radius: 7px;
+                        padding: 2vh 1vw;
+                        color: white;
+                        text-align: center;
+                        margin-top: 10vh;
+                    }
+                }
+                .chartFooter {
+                    padding: 2vh 0;
+                    .progressWrapper {
+                        background: #ECF1F9;
+                        height: 0.5vh;
+                        margin: 1vh 0 2vh 0;
+                        .progress {
+                            height: 100%;
+                            border-radius: 10vh;
+                        }
+                        .lightgreen {
+                            background: #C2DB76;
+                            width: 50%;
+                        }
+                        .amber {
+                            background: #FFC300;
+                            width: 60%;
+                        }
+                        .purple {
+                            background: #444492;
+                            width: 60%;
+                        }
+                        .green {
+                            background: #4B9726;
+                            width: 80%;
+                        }
+                    }
+                }
+                .legendWrap {
+                    margin-bottom: 2vh;
+                    font-size: 0.9vw;
+                    .circle {
+                        width: 1vw;
+                        height: 1vw;
+                        border-radius: 2vw;
+                        margin-right: 0.5vw;
+                    }
+                    .bor-blue {
+                        border: 2px solid #7E72F2;
+                    }
+                    .bor-amber {
+                        border: 2px solid #FFA84C;
+                    }
+                    .bor-red {
+                        border: 2px solid #ED5F5F;
+                    }
+                }
+            }
+        }
+    }
+}
+
+th,td {
+    padding: 2vh 1.5vw!important;
+    font-size: 0.7vw;
+    color: gray;
+}
+th {
+    background: #F5F6FA;
+}

@@ -1,0 +1,66 @@
+<div class="mainWrap">
+    <div class="tabContainer">
+        <div class="trainerViewWrap">
+            <div class="headWrap">
+                <div class="bold" style="letter-spacing: 0.1vw;">US Training on Promotion</div>
+                <div style="color: #43425D; font-size: 0.7vw; padding: 1.5vh 0;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum</div>
+            </div>
+            <div class="trainingContainer row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let trainee of trainees">
+                    <div class="traineeCard col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="traineeBody flex justify space-bw align middle">
+                            <div class="flex align middle justify left">
+                                <img src="{{'../../assets/images/trainees/'+ trainee.srcimg +'.png'}}" alt="" style="height: 8vh;">
+                                <div class="traineeDets">
+                                    <div class="upperCase bold">{{ trainee.name }}</div>
+                                    <div>{{ trainee.designation }}</div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="../../assets/images/phone.PNG" alt="">
+                                <img src="../../assets/images/mail.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="traineeFooter">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding height100">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 flex align bottom justify left height100" style="border-right: 1px solid #B4B4B4; padding: 0 0.5vw;">
+                                    <img src="../../assets/images/alarm-grey.PNG" alt="" style="height: 4vh;">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding flex align top justify left dirColumn width100" style="margin-left: 0.3vw;">
+                                        <div style="font-size: 0.6vw;">Assigned On</div>
+                                        <div  style="font-size: 0.7vw;">12th May, 2020</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 flex align bottom justify lef height100" style="padding: 0 0.5vw;">
+                                    <img src="../../assets/images/due-date.PNG" alt="" style="height: 4vh;">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding flex align top justify left dirColumn width100" style="margin-left: 0.3vw;">
+                                        <div style="font-size: 0.6vw;">Assigned On</div>
+                                        <div  style="font-size: 0.7vw;">12th May, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding height100">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 height100 flex align bottom" style="padding: 0 0.5vw">
+                                    <div class="traineeBtn flex justify center align middle width100">
+                                        <img src="../../assets/images/remove.PNG" alt="">
+                                        <div>Remove</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 height100 flex align bottom" style="padding: 0 0.5vw">
+                                    <div class="traineeBtn flex justify space-even align middle width100" style="background: #444492; color: white;">
+                                        <img src="../../assets/images/remind.PNG" alt="">
+                                        <div>REMIND NOW</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

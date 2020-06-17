@@ -23,6 +23,21 @@ export class DashboardUserMenuComponent implements OnInit {
     isSelected: false,
     isDisabled: false,
     router: "trainings"
+  }]
+
+  public managerMenu = [{
+    label: "My Home",
+    icon_name: "home",
+    isSelected: false,
+    isDisabled: false,
+    router: "home"
+  },
+  {
+    label: "My Trainings",
+    icon_name: "calendar_today",
+    isSelected: false,
+    isDisabled: false,
+    router: "trainings"
   },
   {
     label: "My Team",
@@ -33,31 +48,26 @@ export class DashboardUserMenuComponent implements OnInit {
   },
   {
     label: "Trainer View",
-    icon_name: "visibility",
+    icon_name: "bar_chart",
     isSelected: false,
     isDisabled: false,
-    router: "trainer-view"
-  },
-  {
-    label: "Promotion",
-    icon_name: "visibility",
-    isSelected: false,
-    isDisabled: false,
-    router: "trainee-details-view"
+    router: "trainer"
   }]
 
+  menuList
 
   constructor(public router: Router) { }
 
   ngOnInit(): void {
+    this.menuList = this.manager ? this.managerMenu : this.userMenu;
   }
 
   menuSelected(selected) {
-    this.userMenu.forEach(menu => {
-      if (selected.label === menu.label)
-        menu.isSelected = true;
+    this.menuList.forEach(d => {
+      if (selected.label === d.label)
+        d.isSelected = true;
       else
-        menu.isSelected = false;
+        d.isSelected = false;
     })
     if(this.manager) {
       this.router.navigate(["manager/"+selected.router])

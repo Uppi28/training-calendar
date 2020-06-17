@@ -1,0 +1,61 @@
+.mainWrap{
+    padding: 3vw;
+    .trainerViewWrap{
+        background: #dfc6e326;
+        border-radius: 2vw;
+        padding: 5vh 3vw;
+        box-shadow: 0px 3px 6px #00000029;
+        .headWrap{
+            color: #444492;
+            font-size: 2vw;
+            margin-bottom: 3vh;
+            font-weight: bold;
+            letter-spacing: 0.2vw;
+        }
+        .trainingContainer {
+            .trainingCard {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 6px #0000000A;
+                margin-bottom: 3vh;
+                padding: 1vw;
+                .trainCardHead {
+                    border-bottom: 1px solid #E8E9EC;
+                    color: #4D4F5C;
+                    font-size: 0.9vw;
+                    font-weight: 500;
+                }
+                .trainCardBody {
+                    color: #43425D;
+                    font-weight: 500;
+                    opacity: 0.5;
+                    .desc {
+                        font-size: 0.8vw;
+                        padding: 1vh 0;
+                    }
+                    .details {
+                        font-size: 0.6vw;
+                    }
+                }
+                .trainCardFooter {
+                    height: 8vh;
+                    padding: 1vh 0 0 0;
+                    color: #B4B4B4;
+                    font-size: 0.7vw;
+                    .detailView {
+                        background: #F0F0F0 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 27px;
+                        padding: 2vh 1vw;
+                        color: #43425D;
+                        img {
+                            height: 100%;
+                        }
+                        div {
+                            padding-left: 0.3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

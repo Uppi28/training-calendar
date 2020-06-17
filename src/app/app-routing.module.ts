@@ -13,6 +13,9 @@ import { MyTeamComponent } from './my-team/my-team.component';
 import { ManagerComponent } from './manager/manager.component';
 import { TrainerViewComponent } from './trainer-view/trainer-view.component';
 import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
+import { TrainerComponent } from './trainer/trainer.component';
+import { TraineesComponent } from './trainees/trainees.component';
+import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
 
 
 const routes: Routes = [
@@ -28,6 +31,9 @@ const routes: Routes = [
       { path: 'questionnaire', component: QuestionnaireComponent },
       { path: 'trainer-view', component: TrainerViewComponent },
       { path: 'trainee-details-view', component: TraineeDetailsComponent },
+      { path: 'trainer', component: TrainerComponent },
+      { path: 'trainees', component: TraineesComponent },
+      { path: 'training-analytics', component: TrainingAnalyticsComponent},
       { path: '', component: MyHomeComponent },
       
     ]

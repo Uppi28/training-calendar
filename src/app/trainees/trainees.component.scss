@@ -1,0 +1,42 @@
+.mainWrap{
+    padding: 3vw;
+    .trainerViewWrap{
+        background: #dfc6e326;
+        border-radius: 2vw;
+        padding: 5vh 3vw;
+        box-shadow: 0px 3px 6px #00000029;
+        .headWrap{
+            color: #444492;
+            font-size: 1.5vw;
+            margin-bottom: 3vh;
+        }
+        .trainingContainer {
+            .traineeCard {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 1.5vw;
+                margin-bottom: 3vh;
+                padding: 2vh 1.5vw;
+                color: #707070;
+                .traineeBody {
+                    margin-bottom: 1vh;
+                    .traineeDets {
+                        padding-left: 1.5vh;
+                    }
+                }
+                .traineeFooter {
+                    height: 6vh;
+                    .traineeBtn {
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 5vw;
+                        padding: 0.5vh 0.5vw;
+                        font-size: 0.9vw;
+                        div {
+                            font-size: 0.6vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
