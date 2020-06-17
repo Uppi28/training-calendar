@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public userList = [{name:"Manager",value:"manager"},{name:"Trainer",value:"trainer"},{name:"Trainee",value:"trainee"}];
-  public selectedValue = 'manager';
+  public selectedValue = '';
 
   setUser(event){
     console.log("event",event.value);

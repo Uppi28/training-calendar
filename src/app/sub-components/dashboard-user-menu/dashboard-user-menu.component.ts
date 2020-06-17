@@ -85,21 +85,52 @@ export class DashboardUserMenuComponent implements OnInit {
   constructor(public router: Router,public loader : NgLoaderService) { }
 
   ngOnInit(): void {
-    this.menuList = this.managerMenu
-    this.manager = 'manager'
+    this.menuList = [{
+      label: "My Home",
+      icon_name: "home",
+      isSelected: false,
+      isDisabled: false,
+      router: ""
+    },{
+      label: "My Trainings",
+      icon_name: "home",
+      isSelected: false,
+      isDisabled: false,
+      router: ""
+    }]
+    this.manager = "";
+
+    this.router.events.subscribe(event =>{
+      console.log("event",event)
+      if(event['url']=="/dashboard/home" && this.manager == "") {
+        this.manager = 'manager';
+        this.menuList = this.managerMenu;
+        this.menuSelected(this.menuList[0])
+      }
+    })
   }
   ngOnChanges(){
     if(this.manager == 'manager'){
       this.menuList = this.managerMenu
     }else if(this.manager == 'trainer'){
       this.menuList = this.trainerView
-    }else{
+    }else if(this.manager =='trainee'){
       this.menuList = this.traineeView
+    }else{
+      this.menuList = [{
+        label: "My Home",
+        icon_name: "home",
+        isSelected: false,
+        isDisabled: false,
+        router: ""
+      }]
     }
-    // this.menuList
+    console.log("menulist",this.menuList)
     this.menuSelected(this.menuList[0])
   }
   menuSelected(selected) {
+    console.log(selected)
+    if(selected.router == "")return
     this.menuList.forEach(d => {
       if (selected.label === d.label)
         d.isSelected = true;
@@ -117,6 +148,7 @@ export class DashboardUserMenuComponent implements OnInit {
     setTimeout(() => {
       this.loader.hide()
     }, 300);
+    console.log("selected router",selected,this.manager)
     this.router.navigate(["dashboard/"+selected.router])
     
   }
