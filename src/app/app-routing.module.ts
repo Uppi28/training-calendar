@@ -11,8 +11,8 @@ import { MyTrainingsComponent } from './my-trainings/my-trainings.component';
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { ManagerComponent } from './manager/manager.component';
-import { TrainerViewComponent } from './trainer-view/trainer-view.component';
-import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
+// import { TrainerViewComponent } from './trainer-view/trainer-view.component';
+// import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { TraineesComponent } from './trainees/trainees.component';
 import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
@@ -29,8 +29,8 @@ const routes: Routes = [
       { path: 'team', component: MyTeamComponent },
       { path: 'training', component: MyTrainingsComponent },
       { path: 'questionnaire', component: QuestionnaireComponent },
-      { path: 'trainer-view', component: TrainerViewComponent },
-      { path: 'trainee-details-view', component: TraineeDetailsComponent },
+      // { path: 'trainer-view', component: TrainerViewComponent },
+      // { path: 'trainee-details-view', component: TraineeDetailsComponent },
       { path: 'trainer', component: TrainerComponent },
       { path: 'trainees', component: TraineesComponent },
       { path: 'training-analytics', component: TrainingAnalyticsComponent},
@@ -47,10 +47,14 @@ const routes: Routes = [
       { path: 'team', component: MyTeamComponent },
       { path: 'training', component: MyTrainingsComponent },
       { path: 'questionnaire', component: QuestionnaireComponent },
-      { path: 'trainer-view', component: TrainerViewComponent },
-      { path: 'trainee-details-view', component: TraineeDetailsComponent },
+      { path: 'trainer', component: TrainerComponent },
+      { path: 'trainees', component: TraineesComponent },
+      { path: 'training-analytics', component: TrainingAnalyticsComponent},
+      // { path: 'trainer-view', component: TrainerViewComponent },
+      // { path: 'trainee-details-view', component: TraineeDetailsComponent },
     ]
   },
+  
   { path: '', component: LoginComponent }
 ];
 

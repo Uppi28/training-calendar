@@ -27,8 +27,8 @@ import { MyCalendarComponent } from './sub-components/my-calendar/my-calendar.co
 import { MyTrainingsListComponent } from './my-trainings-list/my-trainings-list.component';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { ManagerComponent } from './manager/manager.component';
-import { TrainerViewComponent } from './trainer-view/trainer-view.component';
-import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
+// import { TrainerViewComponent } from './trainer-view/trainer-view.component';
+// import { TraineeDetailsComponent } from './trainee-details/trainee-details.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { TraineesComponent } from './trainees/trainees.component';
 import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
@@ -55,8 +55,8 @@ import { TrainingAnalyticsComponent } from './training-analytics/training-analyt
     MyTrainingsListComponent,
     MyTeamComponent,
     ManagerComponent,
-    TrainerViewComponent,
-    TraineeDetailsComponent,
+    // TrainerViewComponent,
+    // TraineeDetailsComponent,
     TrainerComponent,
     TraineesComponent,
     TrainingAnalyticsComponent

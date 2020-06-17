@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="team-member-section">
-                <div class="team-member-card red-card" *ngFor="let member of teamMembers">
+                <div class="team-member-card" *ngFor="let member of teamMembers;index as i" [ngClass]="(i%3 == 1)?'purple-card':'red-card'">
                     <div class="member-section flex-center">
                         <div class="profile-pic">
                             <img [src]="member.img_url" alt="profile-pic">

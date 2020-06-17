@@ -4,6 +4,14 @@
     </div>
     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 noPadding flex align middle justify center bold appName">
         SOAR TRAINING PORTAL
+        <mat-form-field id="select-user" floatLabel=never>
+            <mat-label>Select User</mat-label>
+            <mat-select [(ngModel)]="selectedValue" (selectionChange)="setUser($event)" >
+                <mat-option *ngFor="let user of userList" [value]="user.value">
+                    {{user.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
     <div class="userDets col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle justify right">
         <img src="../../assets/images/userIcons.svg" alt="" [hidden]="login">

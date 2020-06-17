@@ -11,5 +11,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public user;
+
+  toggle_user(event){
+    this.user = event;
+    
+  }
 
 }

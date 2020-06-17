@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header (toggleUser)="toggle_user($event)" ></app-header>
 
 <div class="dashboard-wrapper flex">
     <div class="left-menu">
-        <app-dashboard-user-menu [manager]="false"></app-dashboard-user-menu>
+        <app-dashboard-user-menu [manager]="user"></app-dashboard-user-menu>
     </div>
     <div class="right-area">
         <router-outlet></router-outlet>

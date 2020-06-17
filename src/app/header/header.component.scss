@@ -45,4 +45,28 @@
   input:focus {
     outline: unset;
   }
+
+  
 }
+#select-user{
+  font-size: 2vw !important;
+  color: #fff;
+  position: absolute;
+  right : -13%;
+  width:15vw;
+  * {
+    font-size: 1vw !important;
+    color: #fff;
+  }
+  
+}
+::ng-deep.mat-select-arrow {
+  color: #fff;
+}
+::ng-deep.mat-select-value-text{
+  color: #fff;
+}
+
+
+
+
