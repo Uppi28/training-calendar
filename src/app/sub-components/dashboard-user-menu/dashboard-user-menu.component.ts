@@ -32,11 +32,18 @@ export class DashboardUserMenuComponent implements OnInit {
     router: "team"
   },
   {
-    label: "Analytics",
-    icon_name: "bar_chart",
+    label: "Trainer View",
+    icon_name: "visibility",
     isSelected: false,
     isDisabled: false,
-    router: "team"
+    router: "trainer-view"
+  },
+  {
+    label: "Promotion",
+    icon_name: "visibility",
+    isSelected: false,
+    isDisabled: false,
+    router: "trainee-details-view"
   }]
 
 
