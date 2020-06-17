@@ -304,6 +304,9 @@
                                 font-size: 0.8vw;
                                 span{
                                     color:#444792;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
                                 }
                             }
                         }

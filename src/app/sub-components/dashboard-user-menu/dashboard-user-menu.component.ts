@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 })
 export class DashboardUserMenuComponent implements OnInit {
 
-  @Input() manager?: boolean;
+  @Input() manager;
 
-  public userMenu = [{
+  public traineeView = [{
     label: "My Home",
     icon_name: "home",
     isSelected: false,
@@ -24,6 +24,37 @@ export class DashboardUserMenuComponent implements OnInit {
     isDisabled: false,
     router: "trainings"
   }]
+
+  public trainerView =[
+    {
+      label: "My Home",
+      icon_name: "home",
+      isSelected: false,
+      isDisabled: false,
+      router: "home"
+    },
+    {
+      label: "My Trainings",
+      icon_name: "calendar_today",
+      isSelected: false,
+      isDisabled: false,
+      router: "trainings"
+    },
+    {
+      label: "My Team",
+      icon_name: "people",
+      isSelected: false,
+      isDisabled: false,
+      router: "team"
+    },
+    {
+      label: "Trainer View",
+      icon_name: "bar_chart",
+      isSelected: false,
+      isDisabled: false,
+      router: "trainer"
+    }
+  ]
 
   public managerMenu = [{
     label: "My Home",
@@ -46,22 +77,27 @@ export class DashboardUserMenuComponent implements OnInit {
     isDisabled: false,
     router: "team"
   },
-  {
-    label: "Trainer View",
-    icon_name: "bar_chart",
-    isSelected: false,
-    isDisabled: false,
-    router: "trainer"
-  }]
+  ]
 
   menuList
 
   constructor(public router: Router) { }
 
   ngOnInit(): void {
-    this.menuList = this.manager ? this.managerMenu : this.userMenu;
+    this.menuList = this.managerMenu
+    this.manager = 'manager'
   }
-
+  ngOnChanges(){
+    if(this.manager == 'manager'){
+      this.menuList = this.managerMenu
+    }else if(this.manager == 'trainer'){
+      this.menuList = this.trainerView
+    }else{
+      this.menuList = this.traineeView
+    }
+    // this.menuList
+    this.menuSelected(this.menuList[0])
+  }
   menuSelected(selected) {
     this.menuList.forEach(d => {
       if (selected.label === d.label)
@@ -69,11 +105,14 @@ export class DashboardUserMenuComponent implements OnInit {
       else
         d.isSelected = false;
     })
-    if(this.manager) {
-      this.router.navigate(["manager/"+selected.router])
-    } else {
-      this.router.navigate(["dashboard/"+selected.router])
-    }
+    // if(this.manager == 'manager') {
+    //   this.router.navigate(["manager/"+selected.router])
+    // } else if('trainer') {
+    //   this.router.navigate(["dashboard/"+selected.router])
+    // }else{
+    //   this.router.navigate(["dashboard/"+selected.router])
+    // }
+    this.router.navigate(["dashboard/"+selected.router])
   }
 
 }
