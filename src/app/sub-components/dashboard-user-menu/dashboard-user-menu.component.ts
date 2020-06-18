@@ -93,7 +93,7 @@ export class DashboardUserMenuComponent implements OnInit {
       router: ""
     },{
       label: "My Trainings",
-      icon_name: "home",
+      icon_name: "calendar_today",
       isSelected: false,
       isDisabled: false,
       router: ""
@@ -103,8 +103,8 @@ export class DashboardUserMenuComponent implements OnInit {
     this.router.events.subscribe(event =>{
       console.log("event",event)
       if(event['url']=="/dashboard/home" && this.manager == "") {
-        this.manager = 'manager';
-        this.menuList = this.managerMenu;
+        this.manager = 'trainee';
+        this.menuList = this.traineeView;
         this.menuSelected(this.menuList[0])
       }
     })

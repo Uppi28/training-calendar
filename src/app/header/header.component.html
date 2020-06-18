@@ -4,20 +4,30 @@
     </div>
     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 noPadding flex align middle justify center bold appName">
         SOAR TRAINING PORTAL
-        <mat-form-field id="select-user" floatLabel=never *ngIf="hideUserselectToggle">
+        <!-- <mat-form-field id="select-user" floatLabel=never *ngIf="hideUserselectToggle">
             <mat-label>Select User</mat-label>
             <mat-select [(ngModel)]="selectedValue" (selectionChange)="setUser($event)" >
                 <mat-option *ngFor="let user of userList" [value]="user.value">
                     {{user.name}}
                 </mat-option>
             </mat-select>
-        </mat-form-field>
+        </mat-form-field> -->
+        
     </div>
-    <div class="userDets col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle justify right">
+    <div class="userDets col-md-3 col-lg-3 col-sm-3 col-xs-3 noPadding flex align middle justify right" style="position: relative;">
         <img src="../../assets/images/userIcons.svg" alt="" [hidden]="login">
         <img src="../../assets/images/login-icon.svg" alt="" [hidden]="!login">
         <div class="flex align middle" [hidden]="!login">
             <span style="font-size: 0.8vw; margin-left: 0.5vw;" [hidden]="!login">LOGIN</span> 
         </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="user-switch">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item  *ngFor="let user of userList" (click)="setUser(user.value)">
+              <!-- <mat-icon></mat-icon> -->
+              <span>{{user?.name}}</span>
+            </button>
+          </mat-menu>
     </div>
 </div>

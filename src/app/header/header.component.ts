@@ -27,8 +27,8 @@ export class HeaderComponent implements OnInit {
   public selectedValue = '';
 
   setUser(event){
-    console.log("event",event.value);
-    this.toggleUser.emit(event.value);
+    console.log("event",event);
+    this.toggleUser.emit(event);
     this.router.navigate(['dashboard/home']);
     this.hideUserSelect()
   }  
