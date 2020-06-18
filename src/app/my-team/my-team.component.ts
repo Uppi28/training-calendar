@@ -4,7 +4,7 @@ import { GlobalService } from '../global.service';
 @Component({
   selector: 'app-my-team',
   templateUrl: './my-team.component.html',
-  styleUrls: ['./my-team.component.scss']
+  styleUrls: ['./my-team.component.scss','./my-team.component2.scss']
 })
 export class MyTeamComponent implements OnInit {
 
