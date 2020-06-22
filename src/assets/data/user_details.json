@@ -1,5 +1,5 @@
 [{
-    "user_name" : "AMY",
+    "user_name" : "AMY CLARK",
     "full_name" : "AMY CLARK",
     "employee_id" : "e6567578",
     "contact_no" : 946547765,
@@ -9,7 +9,7 @@
     "role" : "admin",
     "desig":"trainee"
 },{
-    "user_name" : "TOBIAS",
+    "user_name" : "TOBIAS MORRISEY",
     "full_name" : "TOBIAS MORRISEY",
     "employee_id" : "e657578",
     "contact_no" : 8376563736,
@@ -19,7 +19,7 @@
     "role" : "admin",
     "desig":"manager"
 },{
-    "user_name" : "ANDERA",
+    "user_name" : "ANDERA HEDSTROM",
     "full_name" : "ANDERA HEDSTROM",
     "employee_id" : "e657678",
     "contact_no" : 8754465457,
