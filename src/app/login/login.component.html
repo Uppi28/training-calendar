@@ -8,11 +8,11 @@
 		<div class="white loginForm">
 			<div class="inputHolder flex align middle">
 				<mat-icon>person</mat-icon>
-				<input type="text" placeholder="Username">
+				<input type="text" placeholder="Username" [(ngModel)]="userName">
 			</div>
 			<div class="inputHolder flex align middle">
 				<mat-icon>lock</mat-icon>
-				<input type="password" placeholder="Password">
+				<input type="password" placeholder="Password" [(ngModel)]="password">
 			</div>
 			<div class="flex align middle justify space-bw">
 				<div>
@@ -20,7 +20,7 @@
 				</div>
 				<div class="italic" style="color: gray;">Forgot Password ?</div>
 			</div>
-			<div class="loginBtn cursorPointer" routerLink="/dashboard">
+			<div class="loginBtn cursorPointer" (click)="loginApp()">    
 				LOGIN
 			</div>
 		</div>

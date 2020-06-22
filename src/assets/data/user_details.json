@@ -6,7 +6,8 @@
     "department" : "Chris Parker",
     "company" : "Sanofi Aventis US",
     "email_id" : "upendra.br@sanofi.com",
-    "role" : "admin"
+    "role" : "admin",
+    "desig":"manager"
 },{
     "user_name" : "vvs",
     "full_name" : "Vinoth Sharma",
@@ -15,7 +16,8 @@
     "department" : "Chris Parker",
     "company" : "Sanofi Aventis US",
     "email_id" : "vinoth.sharma@sanofi.com",
-    "role" : "admin"
+    "role" : "admin",
+    "desig":"trainer"
 },{
     "user_name" : "admin",
     "full_name" : "admin",
@@ -24,5 +26,6 @@
     "department" : "Chris Parker",
     "company" : "Sanofi Aventis US",
     "email_id" : "admin.me@sanofi.com",
-    "role" : "admin"
+    "role" : "admin",
+    "desig":"trainee"
 }]

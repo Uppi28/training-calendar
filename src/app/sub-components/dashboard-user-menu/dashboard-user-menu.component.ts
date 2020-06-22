@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RoutesRecognized } from '@angular/router';
 import { NgLoaderService } from 'src/app/custom-directives/ng-loader/ng-loader.service';
+import { GlobalService } from 'src/app/global.service';
+import { Location } from '@angular/common';
+// import { filter, pairwise, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard-user-menu',
@@ -10,7 +13,7 @@ import { NgLoaderService } from 'src/app/custom-directives/ng-loader/ng-loader.s
 export class DashboardUserMenuComponent implements OnInit {
 
   @Input() manager;
-
+  public prevUrl;
   public traineeView = [{
     label: "My Home",
     icon_name: "home",
@@ -82,7 +85,7 @@ export class DashboardUserMenuComponent implements OnInit {
 
   menuList
 
-  constructor(public router: Router,public loader : NgLoaderService) { }
+  constructor(public router: Router,public loader : NgLoaderService,public globalService : GlobalService) { }
 
   ngOnInit(): void {
     this.menuList = [{
@@ -100,14 +103,46 @@ export class DashboardUserMenuComponent implements OnInit {
     }]
     this.manager = "";
 
-    this.router.events.subscribe(event =>{
-      console.log("event",event)
-      if(event['url']=="/dashboard/home" && this.manager == "") {
-        this.manager = 'trainee';
-        this.menuList = this.traineeView;
-        this.menuSelected(this.menuList[0])
+    // this.router.events.subscribe(event =>{
+    //   this.router.events.pipe(
+    //     filter(e => e instanceof RoutesRecognized),
+    //     pairwise(),
+    //     map((e: [RoutesRecognized, RoutesRecognized]) => e[0].url)
+    //   ).subscribe(url =>{
+    //     this.prevUrl = url
+    //   });
+     
+     
+    // })
+    let user = this.globalService.getSelectedUserData()
+    if(!user){
+      this.menuList = [{
+        label: "My Home",
+        icon_name: "home",
+        isSelected: false,
+        isDisabled: false,
+        router: ""
+      },{
+        label: "My Trainings",
+        icon_name: "calendar_today",
+        isSelected: false,
+        isDisabled: false,
+        router: ""
+      }]
+      this.manager = "";
+    }else{
+      this.manager = user.desig;
+      if(user.desig == 'manager'){
+        this.menuList = this.managerMenu
+      }else if(user.desig == 'trainer'){
+        this.menuList = this.trainerView
+      }else{
+        this.menuList = this.traineeView
       }
-    })
+      // this.menuList.map(item => item.router = "")
+      this.menuSelected(this.menuList[0])
+
+    }
   }
   ngOnChanges(){
     if(this.manager == 'manager'){
@@ -130,7 +165,10 @@ export class DashboardUserMenuComponent implements OnInit {
   }
   menuSelected(selected) {
     console.log(selected)
-    if(selected.router == "")return
+    console.log("prev",this.globalService.getButtonStatus())
+    if( this.globalService.getButtonStatus()) {
+      return  
+    }
     this.menuList.forEach(d => {
       if (selected.label === d.label)
         d.isSelected = true;

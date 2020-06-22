@@ -32,6 +32,7 @@ import { ManagerComponent } from './manager/manager.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { TraineesComponent } from './trainees/trainees.component';
 import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
+import { GlobalService } from './global.service';
 
 
 @NgModule({
@@ -70,7 +71,7 @@ import { TrainingAnalyticsComponent } from './training-analytics/training-analyt
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

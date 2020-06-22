@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class GlobalService {
 
   private userLoggedIn:any = {};
+  private disableButton = true ;
 
   constructor(public ngToaster: NgToasterComponent,
     private httpClient: HttpClient) {
@@ -47,6 +48,14 @@ export class GlobalService {
     return this.httpClient.get("/assets/data/teamMember.json");
   }
 
+  setDisableButton(val){
+    console.log("val",val)
+    this.disableButton = val;
+  }
+
+  getButtonStatus(){
+    return this.disableButton
+  }
   public handleError(error: any): any {
     let errObj: any = {
       status: error.status,
