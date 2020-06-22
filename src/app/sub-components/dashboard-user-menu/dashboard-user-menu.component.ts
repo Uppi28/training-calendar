@@ -102,18 +102,6 @@ export class DashboardUserMenuComponent implements OnInit {
       router: ""
     }]
     this.manager = "";
-
-    // this.router.events.subscribe(event =>{
-    //   this.router.events.pipe(
-    //     filter(e => e instanceof RoutesRecognized),
-    //     pairwise(),
-    //     map((e: [RoutesRecognized, RoutesRecognized]) => e[0].url)
-    //   ).subscribe(url =>{
-    //     this.prevUrl = url
-    //   });
-     
-     
-    // })
     let user = this.globalService.getSelectedUserData()
     if(!user){
       this.menuList = [{
