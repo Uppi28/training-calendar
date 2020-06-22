@@ -1,6 +1,16 @@
 [{
-    "user_name" : "upendra",
-    "full_name" : "Upendra Kumar",
+    "user_name" : "AMY",
+    "full_name" : "AMY CLARK",
+    "employee_id" : "e6567578",
+    "contact_no" : 946547765,
+    "department" : "Chris Parker",
+    "company" : "Sanofi Aventis US",
+    "email_id" : "admin.me@sanofi.com",
+    "role" : "admin",
+    "desig":"trainee"
+},{
+    "user_name" : "TOBIAS",
+    "full_name" : "TOBIAS MORRISEY",
     "employee_id" : "e657578",
     "contact_no" : 8376563736,
     "department" : "Chris Parker",
@@ -9,8 +19,8 @@
     "role" : "admin",
     "desig":"manager"
 },{
-    "user_name" : "vvs",
-    "full_name" : "Vinoth Sharma",
+    "user_name" : "ANDERA",
+    "full_name" : "ANDERA HEDSTROM",
     "employee_id" : "e657678",
     "contact_no" : 8754465457,
     "department" : "Chris Parker",
@@ -18,14 +28,4 @@
     "email_id" : "vinoth.sharma@sanofi.com",
     "role" : "admin",
     "desig":"trainer"
-},{
-    "user_name" : "admin",
-    "full_name" : "admin",
-    "employee_id" : "e6567578",
-    "contact_no" : 946547765,
-    "department" : "Chris Parker",
-    "company" : "Sanofi Aventis US",
-    "email_id" : "admin.me@sanofi.com",
-    "role" : "admin",
-    "desig":"trainee"
 }]

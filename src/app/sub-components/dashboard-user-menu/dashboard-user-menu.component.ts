@@ -152,12 +152,13 @@ export class DashboardUserMenuComponent implements OnInit {
     this.menuSelected(this.menuList[0])
   }
   menuSelected(selected) {
-    console.log(selected)
-    console.log("prev",this.globalService.getButtonStatus())
-    if( this.globalService.getButtonStatus()) {
-      return  
-    }
-    this.menuList.forEach(d => {
+    // console.log(selected)
+    // console.log("prev",this.globalService.getButtonStatus())
+    // if( this.globalService.getButtonStatus()) {
+    //   return  
+    // }
+    if(this.router.url == "/" || this.router.url == "/dashboard" || this.router.url == "/dashboard/questionnaire")return
+    this.menuList.forEach(d => {   
       if (selected.label === d.label)
         d.isSelected = true;
       else

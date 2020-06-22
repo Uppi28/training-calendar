@@ -45,12 +45,11 @@ export class LoginComponent implements OnInit {
 
   loginApp(){
     this.globalService.getUserDetailsHttp().subscribe(res=>{
-      // if(!(this.userName && this.password)){
-      //   this.globalService.setSelectedUserData(res[0]);
-      //   this.route.navigate(['dashboard']);
-      // }
-      // else 
-      if(this.validateUserData(res)){
+      if(!(this.userName && this.password)){
+        this.globalService.setSelectedUserData(res[0]);
+        this.route.navigate(['dashboard']);
+      }
+      else if(this.validateUserData(res)){
         console.log("**********",this.getUserData(res))
         this.globalService.setSelectedUserData(this.getUserData(res));
         // this.globalService.setDisableButton(true);
