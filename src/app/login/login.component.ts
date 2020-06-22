@@ -45,14 +45,12 @@ export class LoginComponent implements OnInit {
 
   loginApp(){
     this.globalService.getUserDetailsHttp().subscribe(res=>{
-      if(!(this.userName && this.password)){
-        this.globalService.setSelectedUserData(res[0]);
-        this.route.navigate(['dashboard']);
-      }
-      else if(this.validateUserData(res)){
-        console.log("**********",this.getUserData(res))
+      // if(!(this.userName && this.password)){
+      //   this.globalService.setSelectedUserData(res[0]);
+      //   this.route.navigate(['dashboard']);
+      // }
+      if(this.validateUserData(res)){
         this.globalService.setSelectedUserData(this.getUserData(res));
-        // this.globalService.setDisableButton(true);
         this.route.navigate(['dashboard']);
       }
       else{
@@ -63,7 +61,6 @@ export class LoginComponent implements OnInit {
   }
 
   validateUserData(arr){
-    console.log("usernamw",this.userName,this.password)
     if(this.userName)
     return arr.some(user=>{
       if(user.user_name === this.userName && user.user_name === this.password)
