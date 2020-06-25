@@ -33,6 +33,9 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { TraineesComponent } from './trainees/trainees.component';
 import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
 import { GlobalService } from './global.service';
+import { ReconciliationTrackerComponent } from './reconciliation-tracker/reconciliation-tracker.component';
+import { ReconciliationOverdueComponent } from './reconciliation-overdue/reconciliation-overdue.component';
+import { ReconciliationReminder2Component } from './reconciliation-reminder2/reconciliation-reminder2.component';
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { GlobalService } from './global.service';
     // TraineeDetailsComponent,
     TrainerComponent,
     TraineesComponent,
-    TrainingAnalyticsComponent
+    TrainingAnalyticsComponent,
+    ReconciliationTrackerComponent,
+    ReconciliationOverdueComponent,
+    ReconciliationReminder2Component
   ],
   imports: [
     BrowserModule,

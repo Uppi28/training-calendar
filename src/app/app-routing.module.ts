@@ -16,6 +16,9 @@ import { ManagerComponent } from './manager/manager.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { TraineesComponent } from './trainees/trainees.component';
 import { TrainingAnalyticsComponent } from './training-analytics/training-analytics.component';
+import { ReconciliationTrackerComponent } from './reconciliation-tracker/reconciliation-tracker.component';
+import { ReconciliationOverdueComponent } from './reconciliation-overdue/reconciliation-overdue.component';
+import { ReconciliationReminder2Component } from './reconciliation-reminder2/reconciliation-reminder2.component';
 
 
 const routes: Routes = [
@@ -31,6 +34,9 @@ const routes: Routes = [
       { path: 'trainer', component: TrainerComponent },
       { path: 'trainees', component: TraineesComponent },
       { path: 'training-analytics', component: TrainingAnalyticsComponent},
+      { path: 'reconciliation-tracker', component: ReconciliationTrackerComponent },
+      { path: 'reconciliation-overdue', component: ReconciliationOverdueComponent },
+      { path: 'reconciliation-remainder', component: ReconciliationReminder2Component },
       { path: '', component: MainComponent },
       // { path: 'trainer-view', component: TrainerViewComponent },
       // { path: 'trainee-details-view', component: TraineeDetailsComponent },

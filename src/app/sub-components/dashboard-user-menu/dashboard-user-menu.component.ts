@@ -53,10 +53,17 @@ export class DashboardUserMenuComponent implements OnInit {
     },
     {
       label: "Trainer View",
-      icon_name: "bar_chart",
+      icon_name: "remove_red_eye",
       isSelected: false,
       isDisabled: false,
       router: "trainer"
+    },
+    {
+      label: "Reconciliation Tracker",
+      icon_name: "games",
+      isSelected: false,
+      isDisabled: false,
+      router: "reconciliation-tracker"
     }
   ]
 
@@ -127,10 +134,13 @@ export class DashboardUserMenuComponent implements OnInit {
       }else{
         this.menuList = this.traineeView
       }
+
       // this.menuList.map(item => item.router = "")
       this.menuSelected(this.menuList[0])
 
     }
+
+
   }
   ngOnChanges(){
     if(this.manager == 'manager'){
