@@ -1,5 +1,7 @@
 # TrainingCalendar
 
+![alt-text](https://media.gettyimages.com/photos/sunset-at-vidhana-soudha-in-bangalore-karnataka-india-picture-id899271434?s=612x612)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 1.	Login Page - https://xd.adobe.com/view/d846f92d-479a-4b80-5e6a-c2bfabd9bb2d-ae77/
